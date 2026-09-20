@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=IBM+Plex+Sans+Arabic:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  html, body { margin:0; padding:0; background:#f7f5f1; }
+  * { box-sizing: border-box; }
+  a { color:#1a1712; text-decoration:none; }
+  a:hover { color:#9a4a28; }
+  ::selection { background:#e8d9cf; }
+  @keyframes rise { from { opacity:0; transform: translateY(14px);} to { opacity:1; transform:none; } }
+  @media (max-width: 860px) { .cols2 { grid-template-columns: 1fr !important; } .cols3 { grid-template-columns: 1fr !important; } .hero-h { font-size: clamp(44px, 13vw, 96px) !important; } }
+</style>
+</helmet>
+
+<div dir="rtl" style="font-family:'IBM Plex Sans Arabic', system-ui, sans-serif; color:#1a1712; background:#f7f5f1; max-width:100%; overflow-x:hidden;">
+
+  <header style="position:sticky; top:0; z-index:50; display:flex; align-items:center; justify-content:space-between; gap:16px; padding:14px clamp(20px,5vw,72px); background:rgba(247,245,241,0.88); backdrop-filter:blur(12px); border-bottom:1px solid #e3ded5;">
+    <a href="#top" style="font-family:'Amiri', serif; font-size:22px; font-weight:700; letter-spacing:-0.01em;">{{ name }}</a>
+    <nav style="display:flex; align-items:center; gap:clamp(14px,2.4vw,30px); font-family:'IBM Plex Sans Arabic', sans-serif; font-weight:500; font-size:14px;">
+      <a href="#work">الأعمال</a>
+      <a href="#about">نبذة</a>
+      <a href="#services">الخدمات</a>
+      <a href="#contact" style="padding:9px 18px; border:1px solid #1a1712; border-radius:999px;" style-hover="background:#1a1712; color:#f7f5f1;">تواصل</a>
+    </nav>
+  </header>
+
+  <section id="top" style="padding:clamp(56px,11vw,140px) clamp(20px,5vw,72px) clamp(40px,7vw,90px); border-bottom:1px solid #e3ded5;">
+    <div style="display:flex; align-items:center; gap:12px; font-family:'IBM Plex Sans Arabic', sans-serif; font-weight:500; font-size:13px; color:#6b6155; margin-bottom:28px;">
+      <span style="width:7px; height:7px; border-radius:50%; background:#9a4a28; display:inline-block;"></span>
+      <span>متاح لمشاريع {{ year }}</span>
+    </div>
+    <h1 class="hero-h" style="font-family:'Amiri', serif; font-weight:400; font-size:clamp(42px,7.4vw,108px); line-height:1.3; letter-spacing:-0.02em; margin:0 0 30px; max-width:16ch; text-wrap:pretty;">
+      أصمّم تجارب رقمية <em style="color:#9a4a28;">تُحدث فرقاً</em> حقيقياً.
+    </h1>
+    <div class="cols2" style="display:grid; grid-template-columns:1.1fr 0.9fr; gap:clamp(24px,4vw,64px); align-items:end;">
+      <p style="margin:0; font-size:clamp(16px,1.5vw,20px); line-height:1.75; color:#4a4339; max-width:52ch; text-wrap:pretty;">{{ intro }}</p>
+      <div style="display:flex; flex-wrap:wrap; gap:10px; justify-content:flex-start;">
+        <a href="#work" style="padding:14px 26px; border-radius:999px; background:#1a1712; color:#f7f5f1; font-size:14px; font-weight:500;" style-hover="background:#9a4a28; color:#fff;">شاهد الأعمال</a>
+        <a href="#contact" style="padding:14px 26px; border-radius:999px; border:1px solid #cdc4b6; font-size:14px; font-weight:500;" style-hover="border-color:#1a1712;">حمّل السيرة الذاتية</a>
+      </div>
+    </div>
+  </section>
+
+  <section style="display:grid; grid-template-columns:repeat(auto-fit, minmax(160px,1fr)); border-bottom:1px solid #e3ded5;">
+    <sc-for list="{{ stats }}" as="s" hint-placeholder-count="4">
+      <div style="padding:clamp(24px,3.4vw,44px) clamp(20px,3vw,40px); border-left:1px solid #e3ded5;">
+        <div style="font-family:'Amiri', serif; font-size:clamp(34px,4vw,54px); line-height:1;">{{ s.value }}</div>
+        <div style="font-family:'IBM Plex Sans Arabic', sans-serif; font-weight:500; font-size:12.5px; color:#6b6155; margin-top:10px;">{{ s.label }}</div>
+      </div>
+    </sc-for>
+  </section>
+
+  <section id="work" style="padding:clamp(56px,9vw,120px) clamp(20px,5vw,72px);">
+    <div style="display:flex; align-items:baseline; justify-content:space-between; gap:20px; flex-wrap:wrap; margin-bottom:clamp(30px,4vw,56px);">
+      <h2 style="font-family:'Amiri', serif; font-weight:400; font-size:clamp(30px,4.2vw,58px); line-height:1.3; margin:0; letter-spacing:-0.02em;">مشاريع مختارة</h2>
+      <span style="font-family:'IBM Plex Mono', monospace; font-size:12px; color:#6b6155; letter-spacing:0.1em;">2023 — {{ year }}</span>
+    </div>
+
+    <div style="display:flex; flex-direction:column; gap:clamp(28px,4vw,56px);">
+      <sc-for list="{{ projects }}" as="p" hint-placeholder-count="4">
+        <a href="#contact" class="cols2" style="display:grid; grid-template-columns:1fr 1fr; gap:clamp(20px,3vw,44px); align-items:center; padding:clamp(18px,2.4vw,28px); border:1px solid #e3ded5; border-radius:20px; background:#fdfcfa;" style-hover="border-color:#1a1712; background:#fff;">
+          <div style="position:relative; aspect-ratio:4/3; border-radius:14px; overflow:hidden; background:repeating-linear-gradient(135deg, #ece6dc 0 10px, #e4ddd1 10px 20px); display:flex; align-items:center; justify-content:center;">
+            <span style="font-family:'IBM Plex Sans Arabic', sans-serif; font-size:12px; color:#6b6155; background:#f7f5f1; padding:7px 12px; border-radius:6px;">{{ p.shot }}</span>
+          </div>
+          <div style="min-width:0;">
+            <div style="display:flex; gap:8px; flex-wrap:wrap; margin-bottom:16px;">
+              <sc-for list="{{ p.tags }}" as="t" hint-placeholder-count="2">
+                <span style="font-family:'IBM Plex Sans Arabic', sans-serif; font-size:11.5px; font-weight:500; color:#6b6155; border:1px solid #ded7cb; border-radius:999px; padding:5px 11px;">{{ t }}</span>
+              </sc-for>
+            </div>
+            <h3 style="font-family:'Amiri', serif; font-weight:700; font-size:clamp(23px,2.6vw,35px); margin:0 0 12px; line-height:1.38;">{{ p.title }}</h3>
+            <p style="margin:0 0 20px; font-size:15.5px; line-height:1.8; color:#4a4339; max-width:48ch; text-wrap:pretty;">{{ p.desc }}</p>
+            <div style="display:flex; align-items:center; gap:24px; flex-wrap:wrap; padding-top:18px; border-top:1px solid #e9e3da;">
+              <div>
+                <div style="font-family:'IBM Plex Sans Arabic', sans-serif; font-size:12px; font-weight:500; color:#6b6155;">النتيجة</div>
+                <div style="font-size:15px; font-weight:600; margin-top:5px;">{{ p.result }}</div>
+              </div>
+              <div>
+                <div style="font-family:'IBM Plex Sans Arabic', sans-serif; font-size:12px; font-weight:500; color:#6b6155;">الدور</div>
+                <div style="font-size:15px; font-weight:600; margin-top:5px;">{{ p.role }}</div>
+              </div>
+            </div>
+          </div>
+        </a>
+      </sc-for>
+    </div>
+  </section>
+
+  <section id="about" style="padding:clamp(56px,9vw,120px) clamp(20px,5vw,72px); background:#1a1712; color:#f2ede4;">
+    <div class="cols2" style="display:grid; grid-template-columns:0.85fr 1.15fr; gap:clamp(28px,5vw,80px);">
+      <div>
+        <div style="font-family:'IBM Plex Sans Arabic', sans-serif; font-weight:500; font-size:13px; color:#a2968a; margin-bottom:20px;">نبذة</div>
+        <div style="aspect-ratio:3/4; border-radius:18px; background:repeating-linear-gradient(135deg, #2a251e 0 10px, #241f19 10px 20px); display:flex; align-items:center; justify-content:center;">
+          <span style="font-family:'IBM Plex Sans Arabic', sans-serif; font-size:12px; color:#a2968a; background:#1a1712; padding:7px 12px; border-radius:6px;">صورة شخصية</span>
+        </div>
+      </div>
+      <div>
+        <p style="font-family:'Amiri', serif; font-size:clamp(24px,3vw,42px); line-height:1.45; margin:0 0 30px; text-wrap:pretty;">{{ aboutLead }}</p>
+        <p style="font-size:16px; line-height:1.85; color:#c3b9ac; margin:0 0 40px; max-width:58ch; text-wrap:pretty;">{{ aboutBody }}</p>
+        <div class="cols2" style="display:grid; grid-template-columns:1fr 1fr; gap:32px;">
+          <div>
+            <div style="font-family:'IBM Plex Sans Arabic', sans-serif; font-weight:500; font-size:13px; color:#a2968a; margin-bottom:14px;">المهارات</div>
+            <div style="display:flex; flex-direction:column; gap:9px; font-size:15px;">
+              <sc-for list="{{ skills }}" as="s" hint-placeholder-count="5">
+                <div style="display:flex; align-items:center; gap:10px;">
+                  <span style="width:5px; height:5px; border-radius:50%; background:#c9713f; display:inline-block;"></span>{{ s }}
+                </div>
+              </sc-for>
+            </div>
+          </div>
+          <div>
+            <div style="font-family:'IBM Plex Sans Arabic', sans-serif; font-weight:500; font-size:13px; color:#a2968a; margin-bottom:14px;">الخبرات</div>
+            <div style="display:flex; flex-direction:column; gap:16px;">
+              <sc-for list="{{ experience }}" as="e" hint-placeholder-count="3">
+                <div>
+                  <div style="font-size:15px; font-weight:600;">{{ e.role }}</div>
+                  <div style="font-size:13.5px; color:#a2968a; margin-top:4px;">{{ e.org }} · {{ e.period }}</div>
+                </div>
+              </sc-for>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="services" style="padding:clamp(56px,9vw,120px) clamp(20px,5vw,72px); border-bottom:1px solid #e3ded5;">
+    <h2 style="font-family:'Amiri', serif; font-weight:400; font-size:clamp(30px,4.2vw,58px); line-height:1.3; margin:0 0 clamp(30px,4vw,56px); letter-spacing:-0.02em;">كيف أشتغل</h2>
+    <div class="cols3" style="display:grid; grid-template-columns:repeat(3, 1fr); gap:clamp(18px,2.4vw,32px);">
+      <sc-for list="{{ services }}" as="sv" hint-placeholder-count="3">
+        <div style="padding:clamp(24px,3vw,36px); border:1px solid #e3ded5; border-radius:18px; background:#fdfcfa;" style-hover="border-color:#1a1712;">
+          <div style="font-family:'IBM Plex Mono', monospace; font-size:12px; color:#9a4a28; letter-spacing:0.1em; margin-bottom:22px;">{{ sv.num }}</div>
+          <h3 style="font-family:'Amiri', serif; font-weight:700; font-size:clamp(20px,2.1vw,26px); line-height:1.4; margin:0 0 12px;">{{ sv.title }}</h3>
+          <p style="margin:0; font-size:15px; line-height:1.8; color:#4a4339; text-wrap:pretty;">{{ sv.desc }}</p>
+        </div>
+      </sc-for>
+    </div>
+  </section>
+
+  <section id="contact" style="padding:clamp(64px,10vw,140px) clamp(20px,5vw,72px);">
+    <div style="max-width:960px;">
+      <div style="font-family:'IBM Plex Sans Arabic', sans-serif; font-weight:500; font-size:13px; color:#6b6155; margin-bottom:24px;">تواصل معي</div>
+      <h2 style="font-family:'Amiri', serif; font-weight:400; font-size:clamp(34px,5.8vw,82px); line-height:1.32; margin:0 0 36px; letter-spacing:-0.02em; text-wrap:pretty;">عندك فكرة؟ <em style="color:#9a4a28;">خلّنا نبنيها.</em></h2>
+      <a href="{{ mailto }}" style="display:inline-block; font-family:'Amiri', serif; font-size:clamp(20px,3vw,40px); border-bottom:2px solid #cdc4b6; padding-bottom:6px;" style-hover="border-color:#9a4a28;">{{ email }}</a>
+      <div style="display:flex; gap:18px; flex-wrap:wrap; margin-top:44px; font-family:'IBM Plex Mono', monospace; font-size:12px; letter-spacing:0.08em; text-transform:uppercase;">
+        <sc-for list="{{ socials }}" as="so" hint-placeholder-count="3">
+          <a href="#contact" style="border:1px solid #cdc4b6; border-radius:999px; padding:10px 20px;" style-hover="border-color:#1a1712;">{{ so }}</a>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <footer style="display:flex; justify-content:space-between; gap:16px; flex-wrap:wrap; padding:26px clamp(20px,5vw,72px); border-top:1px solid #e3ded5; font-family:'IBM Plex Sans Arabic', sans-serif; font-size:12.5px; color:#6b6155;">
+    <span>© {{ year }} {{ name }}</span>
+    <span>صُمّم بعناية</span>
+  </footer>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;name&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;اسمك هنا&quot;,&quot;tsType&quot;:&quot;string&quot;},&quot;email&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;hello@yourname.com&quot;,&quot;tsType&quot;:&quot;string&quot;},&quot;intro&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;مصمم واجهات وتجربة مستخدم. أشتغل مع الشركات الناشئة والعلامات التجارية على تحويل الأفكار المعقدة إلى منتجات رقمية واضحة وجميلة وقابلة للاستخدام.&quot;,&quot;tsType&quot;:&quot;string&quot;},&quot;aboutLead&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;أؤمن أن التصميم الجيد لا يُلاحَظ — يُشعَر به فقط حين يسهّل على الناس ما كان صعباً.&quot;,&quot;tsType&quot;:&quot;string&quot;}}">
+class Component extends DCLogic {
+  renderVals() {
+    const p = this.props;
+    const name = p.name ?? "اسمك هنا";
+    const email = p.email ?? "hello@yourname.com";
+    return {
+      name, email,
+      mailto: "mailto:" + email,
+      year: 2026,
+      intro: p.intro || "مصمم واجهات وتجربة مستخدم. أشتغل مع الشركات الناشئة والعلامات التجارية على تحويل الأفكار المعقدة إلى منتجات رقمية واضحة وجميلة وقابلة للاستخدام.",
+      stats: [
+        { value: "+٣٠", label: "مشروع منجز" },
+        { value: "٥", label: "سنوات خبرة" },
+        { value: "+١٢", label: "عميل" },
+        { value: "٣", label: "جوائز تصميم" }
+      ],
+      projects: [
+        { title: "منصة تسوق إلكتروني", desc: "إعادة تصميم كاملة لتجربة الشراء من التصفح حتى الدفع، مع نظام تصميم موحّد يغطي ٦٠ مكوناً.", tags: ["UX", "نظام تصميم", "موبايل"], result: "+٣٤٪ إتمام الطلبات", role: "مصمم رئيسي", shot: "لقطة المشروع ١" },
+        { title: "تطبيق صحة رقمية", desc: "تطبيق لمتابعة المواعيد والوصفات الطبية، بُني على أبحاث ميدانية مع ٢٠ مستخدماً.", tags: ["أبحاث", "تطبيق", "iOS"], result: "٤.٨ تقييم المتجر", role: "بحث وتصميم", shot: "لقطة المشروع ٢" },
+        { title: "لوحة تحكم بيانات", desc: "أدوات تحليل للفرق التشغيلية: تصور بيانات معقدة بواجهة تقرأ في ثوانٍ.", tags: ["ويب", "بيانات", "B2B"], result: "‑٥٠٪ زمن التقرير", role: "تصميم المنتج", shot: "لقطة المشروع ٣" },
+        { title: "هوية ونظام بصري", desc: "بناء الهوية البصرية الرقمية لعلامة ناشئة، من الشعار حتى مكتبة المكونات.", tags: ["هوية", "براندنق"], result: "إطلاق في ٦ أسابيع", role: "مدير إبداعي", shot: "لقطة المشروع ٤" }
+      ],
+      aboutLead: p.aboutLead || "أؤمن أن التصميم الجيد لا يُلاحَظ — يُشعَر به فقط حين يسهّل على الناس ما كان صعباً.",
+      aboutBody: "بدأت من التصميم الجرافيكي ثم انتقلت لتصميم المنتجات الرقمية. أعمل قريباً من فرق التطوير، وأحب المشاريع التي فيها تعقيد حقيقي يحتاج ترتيباً. خارج الشغل، أقرأ في علم النفس المعرفي وأصور بالأبيض والأسود.",
+      skills: ["بحث المستخدم", "تصميم الواجهات", "أنظمة التصميم", "النماذج التفاعلية", "Figma · Webflow", "أساسيات HTML/CSS"],
+      experience: [
+        { role: "مصمم منتجات أول", org: "شركة تقنية", period: "٢٠٢٤ — الآن" },
+        { role: "مصمم UI/UX", org: "وكالة رقمية", period: "٢٠٢٢ — ٢٠٢٤" },
+        { role: "مصمم جرافيك", org: "عمل حر", period: "٢٠٢٠ — ٢٠٢٢" }
+      ],
+      services: [
+        { num: "٠١", title: "بحث واكتشاف", desc: "مقابلات، تحليل منافسين، ورش عمل — نحدد المشكلة الصحيحة قبل رسم أي شاشة." },
+        { num: "٠٢", title: "تصميم الواجهة", desc: "من الهيكل الأولي إلى تصميم عالي الدقة ونموذج تفاعلي جاهز للاختبار والتسليم." },
+        { num: "٠٣", title: "نظام تصميم", desc: "مكتبة مكونات موثّقة تُبقي المنتج متسقاً وتسرّع الفريق على المدى الطويل." }
+      ],
+      socials: ["Behance", "LinkedIn", "Dribbble", "X"]
+    };
+  }
+}
+</script>
+</body>
+</html>

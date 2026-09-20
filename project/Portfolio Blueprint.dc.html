@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="ds/styles.css">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700&family=Barlow:wght@300;400;500;600&family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  html, body { margin:0; background: var(--color-bg); }
+  * { box-sizing: border-box; }
+  .ar { font-family: "IBM Plex Sans Arabic", var(--font-body), sans-serif; }
+  .arh { font-family: "IBM Plex Sans Arabic", var(--font-heading), sans-serif; font-weight: 600; letter-spacing: -0.01em; }
+  .en { font-family: var(--font-heading); }
+  .mono { font-family: var(--font-heading); letter-spacing: 0.14em; text-transform: uppercase; font-size: 12px; }
+  .reveal { opacity: 0; transform: translateY(18px); transition: opacity .7s cubic-bezier(.2,.7,.3,1), transform .7s cubic-bezier(.2,.7,.3,1); }
+  .reveal.in { opacity: 1; transform: none; }
+  .gridlines { background-image: linear-gradient(to right, var(--color-divider) 1px, transparent 1px); background-size: 25% 100%; }
+  @media (max-width: 900px) { .c2 { grid-template-columns: 1fr !important; } .c3 { grid-template-columns: 1fr !important; } }
+</style>
+</helmet>
+
+<div dir="rtl" class="ar" style="background:var(--color-bg); color:var(--color-text); min-height:100vh;">
+
+  <div style="position:sticky; top:0; z-index:60; display:flex; align-items:center; justify-content:space-between; gap:16px; padding:12px clamp(16px,4vw,56px); background:color-mix(in srgb, var(--color-bg) 92%, transparent); backdrop-filter:blur(10px); border-bottom:1px solid var(--color-divider);">
+    <a href="#top" style="display:flex; align-items:center; gap:10px; color:var(--color-text); text-decoration:none;">
+      <span class="blueprint" style="width:30px; height:30px; display:grid; place-items:center; background:var(--color-accent); color:var(--color-bg); font-family:var(--font-heading); font-weight:700; font-size:16px;">G</span>
+      <span class="en" style="font-weight:600; font-size:17px; letter-spacing:0.02em;">GHADAH ALASSMI</span>
+    </a>
+    <div style="display:flex; align-items:center; gap:clamp(10px,2vw,26px);">
+      <a class="arh" href="#about" style="font-size:15px; color:var(--color-text); text-decoration:none;" style-hover="color:var(--color-accent-700);">نبذة</a>
+      <a class="arh" href="#work" style="font-size:15px; color:var(--color-text); text-decoration:none;" style-hover="color:var(--color-accent-700);">المشاريع</a>
+      <a class="arh" href="#skills" style="font-size:15px; color:var(--color-text); text-decoration:none;" style-hover="color:var(--color-accent-700);">المهارات</a>
+      <a class="arh" href="#path" style="font-size:15px; color:var(--color-text); text-decoration:none;" style-hover="color:var(--color-accent-700);">المسار</a>
+      <a class="btn btn-primary blueprint arh" href="#contact" style="font-size:15px; padding:9px 18px;">تواصل<i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i></a>
+    </div>
+  </div>
+
+  <section id="top" style="padding:clamp(36px,6vw,80px) clamp(16px,4vw,56px) clamp(28px,4vw,56px); border-bottom:1px solid var(--color-divider);">
+    <div class="c2" style="display:grid; grid-template-columns:1.45fr 1fr; gap:clamp(24px,4vw,56px); align-items:stretch;">
+      <div>
+        <div class="mono" style="color:var(--color-accent-700); margin-bottom:18px;">Software Engineering · Flutter Developer</div>
+        <h1 class="en" style="font-size:clamp(52px,9vw,124px); line-height:0.92; letter-spacing:-0.02em; margin:0 0 6px; direction:ltr; text-align:right;">GHADAH<br>ALASSMI</h1>
+        <div class="arh" style="font-size:clamp(20px,2.6vw,32px); color:var(--color-accent-700); margin:14px 0 22px;">غادة العاصمي — مهندسة برمجيات ومطوّرة Flutter</div>
+        <p class="ar" style="font-size:16.5px; line-height:1.85; max-width:56ch; margin:0 0 30px; color:var(--color-neutral-800); text-wrap:pretty;">طالبة هندسة برمجيات في سنتها الأخيرة بجامعة الأمير سطام بن عبدالعزيز، بمعدل تراكمي 4.35 من 5، ومتدربة تعاونية حالياً. أبني تطبيقات موبايل بـ Flutter من الفكرة حتى النشر — لعملاء حقيقيين ولمشاريعي الشخصية.</p>
+        <div style="display:flex; flex-wrap:wrap; gap:10px;">
+          <a class="btn btn-primary blueprint arh" href="#work" style="font-size:16px; padding:13px 26px;">شوفي مشاريعي<i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i></a>
+          <a class="btn btn-secondary blueprint arh" href="#contact" style="font-size:16px; padding:13px 26px;">تحميل السيرة الذاتية<i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i></a>
+        </div>
+      </div>
+
+      <div class="blueprint" style="padding:clamp(18px,2vw,26px); display:flex; flex-direction:column; justify-content:space-between; gap:18px; background:var(--color-neutral-100);">
+        <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+        <div class="mono" style="color:var(--color-neutral-700);">Spec sheet · 2026</div>
+        <sc-for list="{{ specs }}" as="s" hint-placeholder-count="4">
+          <div style="display:flex; align-items:baseline; justify-content:space-between; gap:14px; padding:12px 0; border-bottom:1px solid var(--color-divider);">
+            <span class="arh" style="font-size:15px; color:var(--color-neutral-700);">{{ s.k }}</span>
+            <span class="en" style="font-size:clamp(22px,2.4vw,30px); line-height:1; color:var(--color-accent-800); direction:ltr;">{{ s.v }}</span>
+          </div>
+        </sc-for>
+        <div class="ar" style="font-size:13.5px; color:var(--color-neutral-700); line-height:1.7;">الرياض / الخرج · متاحة للتوظيف بدوام كامل</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills" style="padding:clamp(28px,4vw,52px) clamp(16px,4vw,56px); border-bottom:1px solid var(--color-divider);">
+    <div style="display:flex; align-items:center; gap:14px; margin-bottom:20px;">
+      <h2 class="arh" style="font-size:clamp(20px,2.2vw,26px); margin:0;">المهارات</h2>
+      <span style="flex:1; height:1px; background:var(--color-divider);"></span>
+      <span class="mono" style="color:var(--color-neutral-700);">13 / stack</span>
+    </div>
+    <div style="display:flex; flex-wrap:wrap; gap:8px;">
+      <sc-for list="{{ skills }}" as="sk" hint-placeholder-count="10">
+        <span class="tag tag-outline en" style="font-size:14px; letter-spacing:0.04em; padding:8px 14px; border-radius:0;">{{ sk }}</span>
+      </sc-for>
+    </div>
+  </section>
+
+  <section id="work" style="padding:clamp(40px,6vw,88px) clamp(16px,4vw,56px); border-bottom:1px solid var(--color-divider);">
+    <div style="display:flex; align-items:end; justify-content:space-between; gap:20px; flex-wrap:wrap; margin-bottom:clamp(24px,3vw,44px);">
+      <div>
+        <div class="mono" style="color:var(--color-accent-700); margin-bottom:10px;">Selected work</div>
+        <h2 class="arh" style="font-size:clamp(30px,4.4vw,56px); margin:0; line-height:1.25;">مشاريع بنيتها بنفسي</h2>
+      </div>
+      <p class="ar" style="margin:0; font-size:15px; color:var(--color-neutral-700); max-width:34ch;">ثلاثة مشاريع من التصميم في Figma حتى الكود والنشر على المتاجر.</p>
+    </div>
+
+    <div class="c3" style="display:grid; grid-template-columns:repeat(3,1fr); gap:clamp(16px,2vw,28px);">
+      <sc-for list="{{ projects }}" as="p" hint-placeholder-count="3">
+        <article class="blueprint reveal" style="padding:clamp(16px,1.6vw,22px); display:flex; flex-direction:column; gap:18px; transition:background .25s ease, transform .25s ease;" style-hover="background:var(--color-neutral-100); transform:translateY(-4px);">
+          <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+          <div style="display:flex; align-items:center; justify-content:space-between; gap:10px;">
+            <span class="en" style="font-size:13px; letter-spacing:0.16em; color:var(--color-neutral-600);">{{ p.num }}</span>
+            <span class="tag tag-accent ar" style="font-size:12px; border-radius:0;">{{ p.status }}</span>
+          </div>
+          <div class="blueprint" style="background:var(--color-neutral-200); display:grid; place-items:center; padding:16px 0; overflow:hidden;">
+            <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+            <img src="{{ p.img }}" alt="{{ p.title }}" style="width:62%; max-width:210px; height:auto; display:block;">
+          </div>
+          <div>
+            <h3 class="arh" style="font-size:clamp(21px,2.1vw,26px); margin:0 0 4px; line-height:1.4;">{{ p.title }}</h3>
+            <div class="en" style="font-size:14px; letter-spacing:0.1em; color:var(--color-accent-700); margin-bottom:12px; direction:ltr; text-align:right;">{{ p.latin }}</div>
+            <p class="ar" style="margin:0 0 16px; font-size:15px; line-height:1.8; color:var(--color-neutral-800); text-wrap:pretty;">{{ p.desc }}</p>
+            <div style="display:flex; flex-wrap:wrap; gap:6px; margin-bottom:16px;">
+              <sc-for list="{{ p.stack }}" as="t" hint-placeholder-count="3">
+                <span class="tag tag-neutral en" style="font-size:12.5px; border-radius:0; letter-spacing:0.04em;">{{ t }}</span>
+              </sc-for>
+            </div>
+            <div style="border-top:1px solid var(--color-divider); padding-top:12px; display:flex; justify-content:space-between; gap:10px; align-items:baseline;">
+              <span class="mono" style="color:var(--color-neutral-600);">Role</span>
+              <span class="arh" style="font-size:15px;">{{ p.role }}</span>
+            </div>
+          </div>
+        </article>
+      </sc-for>
+    </div>
+  </section>
+
+  <section id="about" class="gridlines" style="padding:clamp(40px,6vw,88px) clamp(16px,4vw,56px); border-bottom:1px solid var(--color-divider);">
+    <div class="c2" style="display:grid; grid-template-columns:1fr 1fr; gap:clamp(24px,4vw,64px); align-items:start;">
+      <div>
+        <div class="mono" style="color:var(--color-accent-700); margin-bottom:14px;">About</div>
+        <p class="arh" style="font-size:clamp(22px,2.8vw,36px); line-height:1.6; margin:0 0 20px; text-wrap:pretty;">أحب المسافة القصيرة بين الفكرة والمنتج: أرسم في Figma، وأكتب الكود بـ Flutter، وأختبر مع مستخدمين حقيقيين.</p>
+        <p class="ar" style="font-size:16px; line-height:1.9; color:var(--color-neutral-800); margin:0; max-width:52ch; text-wrap:pretty;">{{ aboutBody }}</p>
+      </div>
+      <div style="display:flex; flex-direction:column; gap:14px;">
+        <sc-for list="{{ strengths }}" as="st" hint-placeholder-count="3">
+          <div class="blueprint" style="padding:18px 20px;">
+            <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+            <div class="arh" style="font-size:18px; margin-bottom:6px;">{{ st.t }}</div>
+            <div class="ar" style="font-size:14.5px; line-height:1.75; color:var(--color-neutral-700);">{{ st.d }}</div>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <section id="path" style="padding:clamp(40px,6vw,88px) clamp(16px,4vw,56px); border-bottom:1px solid var(--color-divider);">
+    <div style="display:flex; align-items:center; gap:14px; margin-bottom:clamp(20px,3vw,36px);">
+      <h2 class="arh" style="font-size:clamp(28px,4vw,50px); margin:0; line-height:1.25;">الخبرات والتعليم</h2>
+      <span style="flex:1; height:1px; background:var(--color-divider);"></span>
+    </div>
+    <div class="c2" style="display:grid; grid-template-columns:1fr 1fr; gap:clamp(20px,3vw,48px);">
+      <div>
+        <div class="mono" style="color:var(--color-neutral-700); margin-bottom:16px;">Experience &amp; education</div>
+        <div style="display:flex; flex-direction:column;">
+          <sc-for list="{{ timeline }}" as="e" hint-placeholder-count="3">
+            <div style="display:grid; grid-template-columns:auto 1fr; gap:16px; padding:18px 0; border-top:1px solid var(--color-divider);">
+              <span class="en" style="font-size:14px; letter-spacing:0.08em; color:var(--color-accent-700); direction:ltr; white-space:nowrap;">{{ e.when }}</span>
+              <div>
+                <div class="arh" style="font-size:19px; margin-bottom:4px;">{{ e.title }}</div>
+                <div class="ar" style="font-size:14.5px; color:var(--color-neutral-700); line-height:1.7;">{{ e.org }}</div>
+              </div>
+            </div>
+          </sc-for>
+        </div>
+      </div>
+      <div>
+        <div class="mono" style="color:var(--color-neutral-700); margin-bottom:16px;">Certificates</div>
+        <div style="display:flex; flex-direction:column; gap:12px;">
+          <sc-for list="{{ certs }}" as="c" hint-placeholder-count="3">
+            <div class="blueprint" style="padding:16px 18px; display:flex; align-items:baseline; justify-content:space-between; gap:14px; flex-wrap:wrap;">
+              <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+              <span class="en" style="font-size:17px; letter-spacing:0.01em;">{{ c.name }}</span>
+              <span class="ar" style="font-size:13.5px; color:var(--color-neutral-700);">{{ c.meta }}</span>
+            </div>
+          </sc-for>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" style="padding:clamp(48px,7vw,110px) clamp(16px,4vw,56px); background:var(--color-accent-900); color:var(--color-neutral-100);">
+    <div class="mono" style="color:var(--color-accent-300); margin-bottom:18px;">Get in touch</div>
+    <h2 class="arh" style="font-size:clamp(32px,5.4vw,72px); line-height:1.3; margin:0 0 14px; color:var(--color-neutral-100);">جاهزة لفرصة بدوام كامل.</h2>
+    <p class="ar" style="font-size:17px; line-height:1.85; color:var(--color-accent-300); max-width:50ch; margin:0 0 34px;">إذا تدوّرون على مطوّرة موبايل تفهم التصميم وتشتغل مع الفريق — يسعدني أسمع منكم.</p>
+    <div style="display:flex; flex-wrap:wrap; gap:12px;">
+      <a class="btn blueprint en" href="{{ mailto }}" style="background:var(--color-accent-300); color:var(--color-accent-900); font-size:16px; padding:14px 26px; letter-spacing:0.02em;">{{ email }}<i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i></a>
+      <a class="btn blueprint en" href="{{ linkedin }}" style="border:1px solid var(--color-accent-600); color:var(--color-neutral-100); font-size:16px; padding:14px 26px; letter-spacing:0.02em;" style-hover="background:var(--color-accent-800);">LinkedIn<i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i></a>
+      <a class="btn blueprint arh" href="#contact" style="border:1px solid var(--color-accent-600); color:var(--color-neutral-100); font-size:16px; padding:14px 26px;" style-hover="background:var(--color-accent-800);">تحميل السيرة الذاتية<i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i></a>
+    </div>
+  </section>
+
+  <div style="display:flex; justify-content:space-between; gap:16px; flex-wrap:wrap; padding:20px clamp(16px,4vw,56px);">
+    <span class="en" style="font-size:13px; letter-spacing:0.1em; color:var(--color-neutral-700);">© 2026 GHADAH ALASSMI</span>
+    <span class="ar" style="font-size:13px; color:var(--color-neutral-700);">صُمّم وبُني بعناية</span>
+  </div>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;email&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;Ghadah.alassmi@outlook.com&quot;,&quot;tsType&quot;:&quot;string&quot;},&quot;linkedin&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;#contact&quot;,&quot;tsType&quot;:&quot;string&quot;}}">
+class Component extends DCLogic {
+  componentDidMount() {
+    const io = new IntersectionObserver((es) => {
+      es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+    }, { threshold: 0.12 });
+    document.querySelectorAll('.reveal').forEach((el, i) => { el.style.transitionDelay = (i % 3) * 90 + 'ms'; io.observe(el); });
+  }
+  renderVals() {
+    const email = this.props.email || "Ghadah.alassmi@outlook.com";
+    return {
+      email, mailto: "mailto:" + email,
+      linkedin: this.props.linkedin || "#contact",
+      specs: [
+        { k: "المعدل التراكمي", v: "4.35 / 5" },
+        { k: "مشاريع منشورة", v: "03" },
+        { k: "سنة التخرج", v: "2026" },
+        { k: "التخصص", v: "SW ENG" }
+      ],
+      skills: ["Flutter", "Dart", "Java", "JavaScript", "React", "Firebase", "APIs", "Database Management", "Git", "Figma", "UX Design", "Prototyping", "Usability Testing"],
+      projects: [
+        { num: "01", status: "منشور", title: "توقَّع (Twaqq)", latin: "TWAQQ — SPORTS PREDICTIONS", desc: "تطبيق تنبّؤات رياضية منشور على المتاجر: توقعات المباريات، نقاط، وتصنيف بين المستخدمين.", stack: ["Flutter", "Dart", "Firebase"], role: "تطوير وتصميم", img: "assets/twaqq.png" },
+        { num: "02", status: "مشروع التخرج", title: "ريشة (Risha)", latin: "RISHA — KIDS ROUTINE APP", desc: "تطبيق للأطفال يحوّل الروتين اليومي إلى لعبة بمهام ومكافآت، مبني على أبحاث واختبارات قابلية استخدام.", stack: ["Flutter", "Firebase", "UX Research"], role: "قائدة الفريق", img: "assets/risha.png" },
+        { num: "03", status: "تصميم", title: "Guidor", latin: "GUIDOR — TRIP PLANNER", desc: "تصميم كامل لتطبيق تخطيط الرحلات في Figma: رحلة المستخدم، النماذج التفاعلية، ونظام المكونات.", stack: ["Figma", "Prototyping", "UI"], role: "تصميم المنتج", img: "assets/guidor.png" }
+      ],
+      aboutBody: "بدأت من البرمجة في الجامعة ثم وقعت في حب تصميم التجربة، فصرت أشتغل على الطرفين. حالياً متدربة تعاونية أعمل ضمن فريق على منتجات حقيقية، وأتعلم كيف يتحول الكود إلى شيء يستخدمه الناس فعلاً كل يوم.",
+      strengths: [
+        { t: "من الفكرة حتى المتجر", d: "أغطي الدورة كاملة: بحث، تصميم في Figma، تطوير بـ Flutter، ونشر." },
+        { t: "تفكير بالمستخدم", d: "اختبارات قابلية استخدام ومقابلات قبل ما أكتب أول سطر كود." },
+        { t: "شغل ضمن فريق", d: "قيادة فريق مشروع التخرج وتدريب تعاوني في بيئة عمل حقيقية." }
+      ],
+      timeline: [
+        { when: "2026 —", when2: "", title: "متدربة تعاونية — تطوير تطبيقات", org: "إتقان · تطوير وصيانة تطبيقات موبايل ضمن فريق المنتج" },
+        { when: "2022 — 2026", title: "بكالوريوس هندسة البرمجيات", org: "جامعة الأمير سطام بن عبدالعزيز · معدل 4.35 من 5" },
+        { when: "2025", title: "مشروع التخرج — ريشة", org: "قيادة فريق من التصميم حتى التسليم" }
+      ],
+      certs: [
+        { name: "Meta Front-End Developer", meta: "Meta · ديسمبر 2025 · 9 دورات" },
+        { name: "High-Fidelity Designs in Figma", meta: "شهادة تصميم" },
+        { name: "Wireframes & Low-Fi Prototypes", meta: "شهادة تصميم" }
+      ]
+    };
+  }
+}
+</script>
+</body>
+</html>

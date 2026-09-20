@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="ds/styles.css">
+<meta name="ext-resource-dependency" content="assets/twaqq.png">
+<meta name="ext-resource-dependency" content="assets/risha.png">
+<meta name="ext-resource-dependency" content="assets/guidor.png">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700&family=Barlow:wght@300;400;500;600&family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  html, body { margin:0; background:#1d2d3d; }
+  * { box-sizing: border-box; }
+  .ar { font-family: "IBM Plex Sans Arabic", var(--font-body), sans-serif; }
+  .arh { font-family: "IBM Plex Sans Arabic", var(--font-heading), sans-serif; font-weight: 600; letter-spacing: -0.01em; }
+  .en { font-family: var(--font-heading); }
+  .mono { font-family: var(--font-heading); letter-spacing: 0.16em; text-transform: uppercase; font-size: 12px; }
+  .rv { opacity:0; transform: translateY(24px); transition: opacity .8s cubic-bezier(.2,.7,.3,1), transform .8s cubic-bezier(.2,.7,.3,1); }
+  .rv.in { opacity:1; transform:none; }
+  @keyframes drift { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+  .marquee { display:flex; width:max-content; animation: drift 34s linear infinite; }
+  .row:hover .shot { transform: translateY(-10px) scale(1.04); }
+  .row:hover .rowbg { opacity: 1; }
+  .row:hover .go { transform: translateX(0); opacity:1; }
+  @media (max-width: 900px) { .c2 { grid-template-columns: 1fr !important; } .rowgrid { grid-template-columns: 1fr !important; } .navlinks { display:none !important; } .dgrid { grid-template-columns: 1fr !important; } }
+</style>
+</helmet>
+
+<div dir="{{ dir }}" class="ar" style="background:#1d2d3d; color:#f5f5f8; min-height:100vh; overflow-x:hidden;">
+
+  <div style="position:sticky; top:0; z-index:60; display:flex; align-items:center; justify-content:space-between; gap:16px; padding:12px clamp(16px,4vw,56px); background:color-mix(in srgb, #1d2d3d 88%, transparent); backdrop-filter:blur(12px); border-bottom:1px solid var(--color-accent-800);">
+    <a href="#top" onClick="{{ goHome }}" class="en" style="color:#f5f5f8; text-decoration:none; font-size:17px; letter-spacing:0.12em; font-weight:600;">GHADAH ALASSMI</a>
+    <div style="display:flex; align-items:center; gap:clamp(10px,2vw,26px);">
+      <div class="navlinks" style="display:flex; align-items:center; gap:clamp(12px,2vw,26px);">
+        <a class="arh" href="#work" onClick="{{ goHome }}" style="font-size:15px; color:var(--color-accent-300); text-decoration:none;" style-hover="color:#fff;">{{ t.navWork }}</a>
+        <a class="arh" href="#about" onClick="{{ goHome }}" style="font-size:15px; color:var(--color-accent-300); text-decoration:none;" style-hover="color:#fff;">{{ t.navAbout }}</a>
+        <a class="arh" href="#path" onClick="{{ goHome }}" style="font-size:15px; color:var(--color-accent-300); text-decoration:none;" style-hover="color:#fff;">{{ t.navPath }}</a>
+      </div>
+      <button onClick="{{ toggleLang }}" class="en" style="cursor:pointer; background:transparent; border:1px solid var(--color-accent-600); color:var(--color-accent-200); font-size:13px; letter-spacing:0.1em; padding:8px 12px; border-radius:0;" style-hover="background:var(--color-accent-800); color:#fff;">{{ t.langLabel }}</button>
+      <a class="btn blueprint arh" href="#contact" onClick="{{ goHome }}" style="background:var(--color-accent-300); color:var(--color-accent-900); font-size:15px; padding:9px 18px;">{{ t.navContact }}<i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i></a>
+    </div>
+  </div>
+
+  <sc-if value="{{ isHome }}" hint-placeholder-val="{{ true }}">
+  <div>
+    <section id="top" style="padding:clamp(40px,7vw,96px) clamp(16px,4vw,56px) clamp(32px,5vw,64px);">
+      <div class="mono" style="color:var(--color-accent-400); margin-bottom:22px; display:flex; align-items:center; gap:10px;">
+        <span style="width:8px; height:8px; background:var(--color-accent-300); display:inline-block;"></span>
+        Available for full-time · 2026
+      </div>
+      <h1 class="en" style="font-size:clamp(58px,13vw,190px); line-height:0.86; letter-spacing:-0.03em; margin:0; direction:ltr; text-align:{{ align }}; color:#fff;">GHADAH<br><span style="color:var(--color-accent-400);">ALASSMI</span></h1>
+      <div class="c2" style="display:grid; grid-template-columns:1fr 1fr; gap:clamp(20px,4vw,60px); margin-top:clamp(24px,3vw,44px); align-items:end;">
+        <div>
+          <div class="arh" style="font-size:clamp(20px,2.4vw,30px); line-height:1.5; margin-bottom:18px;">{{ t.heroRole }}</div>
+          <p class="ar" style="font-size:16.5px; line-height:1.9; color:var(--color-accent-300); max-width:52ch; margin:0 0 28px; text-wrap:pretty;">{{ t.heroBody }}</p>
+          <div style="display:flex; flex-wrap:wrap; gap:10px;">
+            <a class="btn blueprint arh" href="#work" style="background:var(--color-accent-300); color:var(--color-accent-900); font-size:16px; padding:14px 28px;">{{ t.btnWork }}<i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i></a>
+            <a class="btn blueprint arh" href="CV.dc.html" target="_blank" style="border:1px solid var(--color-accent-600); color:#f5f5f8; font-size:16px; padding:14px 28px;" style-hover="background:var(--color-accent-800);">{{ t.btnCV }}<i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i></a>
+          </div>
+        </div>
+        <div style="display:grid; grid-template-columns:repeat(3,1fr); border:1px solid var(--color-accent-800);">
+          <sc-for list="{{ specs }}" as="s" hint-placeholder-count="3">
+            <div style="padding:clamp(16px,2vw,24px); border-inline-start:1px solid var(--color-accent-800);">
+              <div class="en" style="font-size:clamp(28px,3.6vw,46px); line-height:1; color:#fff; direction:ltr;">{{ s.v }}</div>
+              <div class="ar" style="font-size:13px; color:var(--color-accent-400); margin-top:10px; line-height:1.5;">{{ s.k }}</div>
+            </div>
+          </sc-for>
+        </div>
+      </div>
+    </section>
+
+    <div style="overflow:hidden; border-top:1px solid var(--color-accent-800); border-bottom:1px solid var(--color-accent-800); padding:14px 0; background:var(--color-accent-800);">
+      <div class="marquee" dir="ltr">
+        <sc-for list="{{ ticker }}" as="tk" hint-placeholder-count="12">
+          <span class="en" style="font-size:15px; letter-spacing:0.22em; color:var(--color-accent-200); padding:0 26px; white-space:nowrap;">{{ tk }}</span>
+        </sc-for>
+      </div>
+    </div>
+
+    <section id="work" style="padding:clamp(44px,6vw,96px) clamp(16px,4vw,56px) 0;">
+      <div style="display:flex; align-items:end; justify-content:space-between; gap:20px; flex-wrap:wrap; margin-bottom:clamp(20px,3vw,40px);">
+        <h2 class="arh" style="font-size:clamp(32px,5.4vw,74px); margin:0; line-height:1.25; color:#fff;">{{ t.navWork }}</h2>
+        <span class="mono" style="color:var(--color-accent-400);">03 projects · 2024—2026</span>
+      </div>
+
+      <sc-for list="{{ projects }}" as="p" hint-placeholder-count="3">
+        <div class="row rv" onClick="{{ p.open }}" style="position:relative; display:block; border-top:1px solid var(--color-accent-800); padding:clamp(26px,3.4vw,52px) 0; cursor:pointer;">
+          <span class="rowbg" style="position:absolute; inset:0; margin-inline:calc(clamp(16px,4vw,56px) * -1); background:var(--color-accent-800); opacity:0; transition:opacity .35s ease; pointer-events:none;"></span>
+          <div class="rowgrid" style="position:relative; display:grid; grid-template-columns:auto 1fr 250px; gap:clamp(18px,3vw,48px); align-items:center;">
+            <span class="en" style="font-size:clamp(28px,3vw,42px); color:var(--color-accent-600); line-height:1;">{{ p.num }}</span>
+            <div>
+              <div style="display:flex; align-items:center; gap:12px; flex-wrap:wrap; margin-bottom:10px;">
+                <h3 class="arh" style="font-size:clamp(26px,3.4vw,46px); margin:0; line-height:1.35; color:#fff;">{{ p.title }}</h3>
+                <span class="tag ar" style="background:var(--color-accent-300); color:var(--color-accent-900); font-size:12.5px; border-radius:0;">{{ p.status }}</span>
+              </div>
+              <div class="en" style="font-size:14px; letter-spacing:0.14em; color:var(--color-accent-400); margin-bottom:14px; direction:ltr; text-align:{{ align }};">{{ p.latin }}</div>
+              <p class="ar" style="margin:0 0 16px; font-size:16px; line-height:1.85; color:var(--color-accent-300); max-width:48ch; text-wrap:pretty;">{{ p.desc }}</p>
+              <div style="display:flex; flex-wrap:wrap; gap:8px; align-items:center;">
+                <sc-for list="{{ p.stack }}" as="tg" hint-placeholder-count="3">
+                  <span class="en" style="font-size:13px; letter-spacing:0.08em; color:var(--color-accent-200); border:1px solid var(--color-accent-700); padding:6px 12px;">{{ tg }}</span>
+                </sc-for>
+                <span class="go arh" style="font-size:14px; color:var(--color-accent-300); opacity:0; transform:translateX(10px); transition:all .35s ease; margin-inline-start:6px;">{{ t.viewCase }} →</span>
+              </div>
+            </div>
+            <div class="blueprint" style="border-color:var(--color-accent-700); padding:14px; display:grid; place-items:center; justify-self:start;">
+              <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+              <img class="shot" src="{{ p.img }}" alt="{{ p.title }}" style="width:140px; height:auto; display:block; transition:transform .4s cubic-bezier(.2,.7,.3,1);">
+            </div>
+          </div>
+        </div>
+      </sc-for>
+    </section>
+
+    <section id="about" style="margin-top:clamp(44px,6vw,96px); padding:clamp(44px,6vw,96px) clamp(16px,4vw,56px); background:var(--color-bg); color:var(--color-text);">
+      <div class="c2" style="display:grid; grid-template-columns:1.1fr 0.9fr; gap:clamp(24px,4vw,64px); align-items:start;">
+        <div>
+          <div class="mono" style="color:var(--color-accent-700); margin-bottom:16px;">{{ t.navAbout }}</div>
+          <p class="arh" style="font-size:clamp(24px,3.2vw,42px); line-height:1.55; margin:0 0 22px; text-wrap:pretty;">{{ t.aboutLead }}</p>
+          <p class="ar" style="font-size:16px; line-height:1.9; color:var(--color-neutral-800); margin:0; max-width:52ch; text-wrap:pretty;">{{ t.aboutBody }}</p>
+        </div>
+        <div>
+          <div class="mono" style="color:var(--color-accent-700); margin-bottom:16px;">{{ t.skillsLabel }}</div>
+          <div style="display:flex; flex-wrap:wrap; gap:8px;">
+            <sc-for list="{{ skills }}" as="sk" hint-placeholder-count="10">
+              <span class="tag tag-outline en" style="font-size:14px; letter-spacing:0.04em; padding:8px 14px; border-radius:0;">{{ sk }}</span>
+            </sc-for>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="path" style="padding:clamp(44px,6vw,96px) clamp(16px,4vw,56px); background:var(--color-bg); color:var(--color-text); border-top:1px solid var(--color-divider);">
+      <div class="c2" style="display:grid; grid-template-columns:1fr 1fr; gap:clamp(22px,3vw,52px);">
+        <div>
+          <h2 class="arh" style="font-size:clamp(26px,3.4vw,42px); margin:0 0 20px; line-height:1.3;">{{ t.navPath }}</h2>
+          <sc-for list="{{ timeline }}" as="e" hint-placeholder-count="3">
+            <div style="display:grid; grid-template-columns:auto 1fr; gap:16px; padding:18px 0; border-top:1px solid var(--color-divider);">
+              <span class="en" style="font-size:14px; letter-spacing:0.08em; color:var(--color-accent-700); direction:ltr; white-space:nowrap;">{{ e.when }}</span>
+              <div>
+                <div class="arh" style="font-size:19px; margin-bottom:4px;">{{ e.title }}</div>
+                <div class="ar" style="font-size:14.5px; color:var(--color-neutral-700); line-height:1.7;">{{ e.org }}</div>
+              </div>
+            </div>
+          </sc-for>
+        </div>
+        <div>
+          <h2 class="arh" style="font-size:clamp(26px,3.4vw,42px); margin:0 0 20px; line-height:1.3;">{{ t.certsLabel }}</h2>
+          <div style="display:flex; flex-direction:column; gap:12px;">
+            <sc-for list="{{ certs }}" as="c" hint-placeholder-count="3">
+              <div class="blueprint" style="padding:16px 18px;">
+                <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+                <div class="en" style="font-size:18px;">{{ c.name }}</div>
+                <div class="ar" style="font-size:13.5px; color:var(--color-neutral-700); margin-top:6px;">{{ c.meta }}</div>
+              </div>
+            </sc-for>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+  </sc-if>
+
+  <sc-if value="{{ isDetail }}" hint-placeholder-val="{{ false }}">
+  <div>
+    <section style="padding:clamp(28px,4vw,56px) clamp(16px,4vw,56px) 0;">
+      <button onClick="{{ goHome }}" class="arh" style="cursor:pointer; background:transparent; border:1px solid var(--color-accent-700); color:var(--color-accent-200); font-size:14px; padding:9px 16px; border-radius:0; margin-bottom:clamp(24px,3vw,44px);" style-hover="background:var(--color-accent-800); color:#fff;">← {{ t.back }}</button>
+
+      <div class="mono" style="color:var(--color-accent-400); margin-bottom:14px;">{{ proj.latin }}</div>
+      <h1 class="arh" style="font-size:clamp(38px,7vw,96px); line-height:1.2; margin:0 0 16px; color:#fff;">{{ proj.title }}</h1>
+      <p class="ar" style="font-size:clamp(17px,2vw,22px); line-height:1.75; color:var(--color-accent-300); max-width:56ch; margin:0 0 30px; text-wrap:pretty;">{{ proj.tagline }}</p>
+
+      <div class="dgrid" style="display:grid; grid-template-columns:repeat(4,1fr); border:1px solid var(--color-accent-800); margin-bottom:clamp(28px,4vw,56px);">
+        <sc-for list="{{ proj.facts }}" as="f" hint-placeholder-count="4">
+          <div style="padding:clamp(14px,1.8vw,22px); border-inline-start:1px solid var(--color-accent-800);">
+            <div class="mono" style="color:var(--color-accent-500); margin-bottom:8px;">{{ f.k }}</div>
+            <div class="arh" style="font-size:17px; color:#fff; line-height:1.5;">{{ f.v }}</div>
+          </div>
+        </sc-for>
+      </div>
+    </section>
+
+    <section style="padding:0 clamp(16px,4vw,56px) clamp(40px,6vw,88px);">
+      <div class="dgrid" style="display:grid; grid-template-columns:1.25fr 0.75fr; gap:clamp(26px,4vw,64px); align-items:start;">
+        <div>
+          <h2 class="arh" style="font-size:clamp(22px,2.6vw,32px); margin:0 0 14px; color:#fff;">{{ t.overview }}</h2>
+          <p class="ar" style="font-size:16.5px; line-height:1.95; color:var(--color-accent-300); margin:0 0 36px; max-width:60ch; text-wrap:pretty;">{{ proj.overview }}</p>
+
+          <h2 class="arh" style="font-size:clamp(22px,2.6vw,32px); margin:0 0 16px; color:#fff;">{{ t.built }}</h2>
+          <div style="display:flex; flex-direction:column; gap:2px; margin-bottom:36px;">
+            <sc-for list="{{ proj.built }}" as="b" hint-placeholder-count="4">
+              <div style="display:grid; grid-template-columns:auto 1fr; gap:14px; padding:16px 0; border-top:1px solid var(--color-accent-800); align-items:baseline;">
+                <span class="en" style="font-size:13px; color:var(--color-accent-500); letter-spacing:0.1em;">{{ b.n }}</span>
+                <span class="ar" style="font-size:16px; line-height:1.8; color:var(--color-accent-200);">{{ b.txt }}</span>
+              </div>
+            </sc-for>
+          </div>
+
+          <h2 class="arh" style="font-size:clamp(22px,2.6vw,32px); margin:0 0 16px; color:#fff;">{{ t.outcomes }}</h2>
+          <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(180px,1fr)); gap:12px;">
+            <sc-for list="{{ proj.outcomes }}" as="o" hint-placeholder-count="3">
+              <div class="blueprint" style="border-color:var(--color-accent-700); padding:18px;">
+                <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+                <div class="en" style="font-size:clamp(24px,2.6vw,34px); color:var(--color-accent-300); line-height:1; direction:ltr;">{{ o.v }}</div>
+                <div class="ar" style="font-size:14px; color:var(--color-accent-400); margin-top:10px; line-height:1.6;">{{ o.k }}</div>
+              </div>
+            </sc-for>
+          </div>
+        </div>
+
+        <div style="position:sticky; top:86px; display:flex; flex-direction:column; gap:18px;">
+          <div class="blueprint" style="border-color:var(--color-accent-700); padding:20px; display:grid; place-items:center; background:var(--color-accent-800);">
+            <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+            <img src="{{ proj.img }}" alt="{{ proj.title }}" style="width:100%; max-width:240px; height:auto; display:block;">
+          </div>
+          <div>
+            <div class="mono" style="color:var(--color-accent-500); margin-bottom:10px;">{{ t.stack }}</div>
+            <div style="display:flex; flex-wrap:wrap; gap:8px;">
+              <sc-for list="{{ proj.stack }}" as="s2" hint-placeholder-count="3">
+                <span class="en" style="font-size:13px; letter-spacing:0.08em; color:var(--color-accent-200); border:1px solid var(--color-accent-700); padding:6px 12px;">{{ s2 }}</span>
+              </sc-for>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section style="padding:0 clamp(16px,4vw,56px) clamp(44px,6vw,88px);">
+      <div style="display:flex; justify-content:space-between; align-items:center; gap:16px; flex-wrap:wrap; border-top:1px solid var(--color-accent-800); padding-top:24px;">
+        <button onClick="{{ goHome }}" class="arh" style="cursor:pointer; background:transparent; border:1px solid var(--color-accent-700); color:var(--color-accent-200); font-size:14px; padding:10px 18px; border-radius:0;" style-hover="background:var(--color-accent-800); color:#fff;">← {{ t.back }}</button>
+        <button onClick="{{ nextProject }}" class="arh" style="cursor:pointer; background:var(--color-accent-300); border:1px solid var(--color-accent-300); color:var(--color-accent-900); font-size:14px; padding:10px 18px; border-radius:0;" style-hover="background:var(--color-accent-200);">{{ t.nextProject }} →</button>
+      </div>
+    </section>
+  </div>
+  </sc-if>
+
+  <section id="contact" style="padding:clamp(52px,8vw,120px) clamp(16px,4vw,56px); border-top:1px solid var(--color-accent-800);">
+    <div class="mono" style="color:var(--color-accent-400); margin-bottom:18px;">Get in touch</div>
+    <h2 class="arh" style="font-size:clamp(34px,6.4vw,86px); line-height:1.25; margin:0 0 18px; color:#fff;">{{ t.contactTitle }}</h2>
+    <p class="ar" style="font-size:17px; line-height:1.85; color:var(--color-accent-300); max-width:50ch; margin:0 0 36px;">{{ t.contactBody }}</p>
+    <div style="display:flex; flex-wrap:wrap; gap:12px;">
+      <a class="btn blueprint en" href="{{ mailto }}" style="background:var(--color-accent-300); color:var(--color-accent-900); font-size:17px; padding:15px 28px; letter-spacing:0.02em;">{{ email }}<i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i></a>
+      <a class="btn blueprint en" href="{{ tel }}" style="border:1px solid var(--color-accent-600); color:#f5f5f8; font-size:17px; padding:15px 28px; letter-spacing:0.04em; direction:ltr;" style-hover="background:var(--color-accent-800);">{{ phone }}<i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i></a>
+      <a class="btn blueprint en" href="{{ linkedin }}" target="_blank" rel="noreferrer" style="border:1px solid var(--color-accent-600); color:#f5f5f8; font-size:17px; padding:15px 28px; letter-spacing:0.02em;" style-hover="background:var(--color-accent-800);">LinkedIn<i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i></a>
+      <a class="btn blueprint arh" href="CV.dc.html" target="_blank" style="border:1px solid var(--color-accent-600); color:#f5f5f8; font-size:17px; padding:15px 28px;" style-hover="background:var(--color-accent-800);">{{ t.btnCV }}<i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i></a>
+    </div>
+  </section>
+
+  <div style="display:flex; justify-content:space-between; gap:16px; flex-wrap:wrap; padding:20px clamp(16px,4vw,56px); border-top:1px solid var(--color-accent-800);">
+    <span class="en" style="font-size:13px; letter-spacing:0.1em; color:var(--color-accent-400);">© 2026 GHADAH ALASSMI</span>
+    <span class="ar" style="font-size:13px; color:var(--color-accent-400);">{{ t.footer }}</span>
+  </div>
+
+  <template id="__bundler_thumbnail"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect width="100" height="100" fill="#1d2d3d"/><text x="50" y="50" text-anchor="middle" dominant-baseline="central" font-family="Barlow Condensed, sans-serif" font-size="30" font-weight="700" fill="#b5d9fd">GA</text></svg></template>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;email&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;Ghadah.alassmi@outlook.com&quot;,&quot;tsType&quot;:&quot;string&quot;},&quot;linkedin&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;https://www.linkedin.com/in/ghadah-alassmi-98817737a&quot;,&quot;tsType&quot;:&quot;string&quot;}}">
+const DATA = {
+  ar: {
+    navWork: "المشاريع", navAbout: "نبذة", navPath: "الخبرات والتعليم", navContact: "تواصل",
+    langLabel: "EN", skillsLabel: "المهارات", certsLabel: "الشهادات", viewCase: "تفاصيل المشروع",
+    back: "رجوع", overview: "نظرة عامة", built: "ما بنيته", outcomes: "النتائج", stack: "التقنيات", nextProject: "المشروع التالي",
+    heroRole: "مهندسة برمجيات ومطوّرة تطبيقات Flutter",
+    heroBody: "سنة أخيرة في جامعة الأمير سطام بن عبدالعزيز، معدل 4.35 من 5، ومتدربة تعاونية. أبني تطبيقات موبايل من الفكرة حتى النشر.",
+    btnWork: "شوفي مشاريعي", btnCV: "تحميل السيرة الذاتية",
+    aboutLead: "أحب المسافة القصيرة بين الفكرة والمنتج — أصمّم في Figma وأكتبها كوداً بـ Flutter.",
+    aboutBody: "بدأت من البرمجة في الجامعة ثم وقعت في حب تصميم التجربة، فصرت أشتغل على الطرفين. حالياً متدربة تعاونية أعمل ضمن فريق على منتجات حقيقية، وأتعلم كيف يتحول الكود إلى شيء يستخدمه الناس فعلاً كل يوم.",
+    contactTitle: "خلونا نشتغل مع بعض.",
+    contactBody: "أبحث عن فرصة بدوام كامل في تطوير تطبيقات الموبايل أو الواجهات.",
+    footer: "صُمّم وبُني بعناية",
+    specs: [{ v: "4.35", k: "المعدل من 5" }, { v: "03", k: "مشاريع" }, { v: "2026", k: "سنة التخرج" }],
+    timeline: [
+      { when: "2026 —", title: "متدربة تعاونية — تطوير تطبيقات", org: "تطوير وصيانة تطبيقات موبايل ضمن فريق المنتج" },
+      { when: "2022 — 2026", title: "بكالوريوس هندسة البرمجيات", org: "جامعة الأمير سطام بن عبدالعزيز · معدل 4.35 من 5" },
+      { when: "2025", title: "مشروع التخرج — ريشة", org: "قيادة الفريق من التصميم حتى التسليم" }
+    ],
+    certs: [
+      { name: "Meta Front-End Developer", meta: "Meta · ديسمبر 2025 · 9 دورات + مشروع ختامي" },
+      { name: "High-Fidelity Designs in Figma", meta: "شهادة تصميم" },
+      { name: "Wireframes & Low-Fi Prototypes", meta: "شهادة تصميم" }
+    ],
+    projects: [
+      {
+        num: "01", status: "منشور", title: "توقَّع (Twaqq)", latin: "TWAQQ — SPORTS PREDICTIONS",
+        desc: "تطبيق تنبّؤات رياضية منشور على المتاجر: توقعات المباريات، نقاط، وتصنيف بين المستخدمين.",
+        tagline: "تطبيق يحوّل متابعة المباريات إلى منافسة بين الأصدقاء: توقّع النتيجة، اجمع نقاط، واطلع فوق في التصنيف.",
+        facts: [{ k: "Role", v: "تطوير وتصميم" }, { k: "Year", v: "2025" }, { k: "Platform", v: "iOS · Android" }, { k: "Status", v: "منشور" }],
+        overview: "فكرة التطبيق بدأت من عادة بسيطة: التوقعات بين الأصدقاء قبل كل مباراة. حوّلتها إلى منتج فيه حساب مستخدم، جدول مباريات مباشر، نظام نقاط، ولوحة تصنيف. اشتغلت على التصميم والتطوير والنشر بنفسي.",
+        built: [
+          { n: "01", txt: "واجهة توقّع المباريات مع حالات التحميل والأخطاء" },
+          { n: "02", txt: "نظام نقاط وتصنيف لحظي مبني على Firebase" },
+          { n: "03", txt: "مصادقة المستخدمين وإدارة الملف الشخصي" },
+          { n: "04", txt: "هوية بصرية كاملة: الشعار، الألوان، والأيقونات" }
+        ],
+        outcomes: [{ v: "LIVE", k: "منشور على المتاجر" }, { v: "100%", k: "تصميم وتطوير فردي" }, { v: "RT", k: "تحديث النتائج لحظياً" }],
+        stack: ["Flutter", "Dart", "Firebase", "Figma"], img: "assets/twaqq.png"
+      },
+      {
+        num: "02", status: "مشروع التخرج", title: "ريشة (Risha)", latin: "RISHA — KIDS ROUTINE APP",
+        desc: "تطبيق للأطفال يحوّل الروتين اليومي إلى لعبة بمهام ومكافآت، مبني على أبحاث واختبارات قابلية استخدام.",
+        tagline: "مشروع التخرج: تطبيق يساعد الأطفال على بناء روتين يومي صحي عبر مهام ومكافآت ورفيق كرتوني يتقدّم معهم.",
+        facts: [{ k: "Role", v: "قائدة الفريق" }, { k: "Year", v: "2025 — 2026" }, { k: "Users", v: "أطفال 5–10" }, { k: "Type", v: "مشروع تخرج" }],
+        overview: "بدأنا بأبحاث مع أولياء الأمور لفهم صعوبة بناء الروتين عند الأطفال. النتيجة تطبيق يقسّم اليوم إلى مهام صغيرة ملوّنة، ويكافئ الطفل على الإنجاز بشخصية تتطور معه. قدت الفريق في التصميم والتخطيط وكتبت جزءاً كبيراً من الواجهات.",
+        built: [
+          { n: "01", txt: "أبحاث ومقابلات مع أولياء الأمور وتحليل النتائج" },
+          { n: "02", txt: "رحلة المستخدم والنماذج التفاعلية في Figma" },
+          { n: "03", txt: "واجهات المهام والمكافآت وشريط التقدم اليومي" },
+          { n: "04", txt: "اختبارات قابلية استخدام وتعديلات بناءً عليها" }
+        ],
+        outcomes: [{ v: "20", k: "مستخدم في الاختبارات" }, { v: "4", k: "أعضاء الفريق بقيادتي" }, { v: "A", k: "تقييم المشروع" }],
+        stack: ["Flutter", "Firebase", "UX Research", "Figma"], img: "assets/risha.png"
+      },
+      {
+        num: "03", status: "تصميم", title: "Guidor", latin: "GUIDOR — TRIP PLANNER",
+        desc: "تصميم كامل لتطبيق تخطيط الرحلات في Figma: رحلة المستخدم، النماذج التفاعلية، ونظام المكونات.",
+        tagline: "تطبيق تخطيط رحلات: تختار الوجهة، يقترح لك الإقامة والأنشطة، ويبني لك جدولاً يومياً قابلاً للتعديل.",
+        facts: [{ k: "Role", v: "تصميم المنتج" }, { k: "Year", v: "2024" }, { k: "Tool", v: "Figma" }, { k: "Type", v: "مفهوم" }],
+        overview: "مشروع تصميمي ركزت فيه على أصعب جزء في تطبيقات السفر: بناء الجدول اليومي دون إرهاق المستخدم. صممت رحلة onboarding قصيرة، واختيار وجهة بصري، وجدولاً يومياً بالسحب والإفلات.",
+        built: [
+          { n: "01", txt: "خريطة رحلة المستخدم وهيكل المعلومات" },
+          { n: "02", txt: "تصميم عالي الدقة لـ 18 شاشة" },
+          { n: "03", txt: "نموذج تفاعلي كامل قابل للاختبار" },
+          { n: "04", txt: "مكتبة مكونات ونظام ألوان وخطوط" }
+        ],
+        outcomes: [{ v: "18", k: "شاشة مصممة" }, { v: "1", k: "نموذج تفاعلي كامل" }, { v: "UI", k: "نظام مكونات" }],
+        stack: ["Figma", "Prototyping", "UI Design"], img: "assets/guidor.png"
+      }
+    ]
+  },
+  en: {
+    navWork: "Work", navAbout: "About", navPath: "Experience & Education", navContact: "Contact",
+    langLabel: "ع", skillsLabel: "Skills", certsLabel: "Certificates", viewCase: "View case study",
+    back: "Back", overview: "Overview", built: "What I built", outcomes: "Outcomes", stack: "Stack", nextProject: "Next project",
+    heroRole: "Software engineer & Flutter developer",
+    heroBody: "Final-year software engineering student at Prince Sattam bin Abdulaziz University, GPA 4.35/5, currently a co-op trainee. I build mobile apps end to end — from idea to the store.",
+    btnWork: "View my work", btnCV: "Download CV",
+    aboutLead: "I like the short distance between an idea and a product — I design it in Figma, then write it in Flutter.",
+    aboutBody: "I started with programming at university, then fell for experience design, so now I work on both sides. As a co-op trainee I work inside a product team on real software, learning how code turns into something people actually use every day.",
+    contactTitle: "Let's build something.",
+    contactBody: "I'm looking for a full-time role in mobile or front-end development.",
+    footer: "Designed and built with care",
+    specs: [{ v: "4.35", k: "GPA out of 5" }, { v: "03", k: "Projects" }, { v: "2026", k: "Graduation" }],
+    timeline: [
+      { when: "2026 —", title: "Co-op trainee — App development", org: "Building and maintaining mobile apps inside a product team" },
+      { when: "2022 — 2026", title: "BSc Software Engineering", org: "Prince Sattam bin Abdulaziz University · GPA 4.35/5" },
+      { when: "2025", title: "Graduation project — Risha", org: "Led the team from design through delivery" }
+    ],
+    certs: [
+      { name: "Meta Front-End Developer", meta: "Meta · Dec 2025 · 9 courses + capstone" },
+      { name: "High-Fidelity Designs in Figma", meta: "Design certificate" },
+      { name: "Wireframes & Low-Fi Prototypes", meta: "Design certificate" }
+    ],
+    projects: [
+      {
+        num: "01", status: "Live", title: "Twaqq", latin: "TWAQQ — SPORTS PREDICTIONS",
+        desc: "A published sports prediction app: match forecasts, points and a live leaderboard.",
+        tagline: "An app that turns following matches into a game between friends: predict the score, earn points, climb the leaderboard.",
+        facts: [{ k: "Role", v: "Design & development" }, { k: "Year", v: "2025" }, { k: "Platform", v: "iOS · Android" }, { k: "Status", v: "Live" }],
+        overview: "The idea came from a simple habit: predictions between friends before every match. I turned it into a product with accounts, a live fixture list, a points engine and a leaderboard — designing, building and shipping it myself.",
+        built: [
+          { n: "01", txt: "Prediction flow with full loading and error states" },
+          { n: "02", txt: "Real-time points and leaderboard on Firebase" },
+          { n: "03", txt: "Authentication and profile management" },
+          { n: "04", txt: "Complete visual identity: logo, palette, icons" }
+        ],
+        outcomes: [{ v: "LIVE", k: "Published on the stores" }, { v: "100%", k: "Solo design & build" }, { v: "RT", k: "Real-time results" }],
+        stack: ["Flutter", "Dart", "Firebase", "Figma"], img: "assets/twaqq.png"
+      },
+      {
+        num: "02", status: "Graduation project", title: "Risha", latin: "RISHA — KIDS ROUTINE APP",
+        desc: "A kids app that turns the daily routine into a game of tasks and rewards, grounded in research and usability testing.",
+        tagline: "My graduation project: an app that helps children build a healthy daily routine through tasks, rewards and a companion character that grows with them.",
+        facts: [{ k: "Role", v: "Team lead" }, { k: "Year", v: "2025 — 2026" }, { k: "Users", v: "Kids 5–10" }, { k: "Type", v: "Graduation project" }],
+        overview: "We started with parent interviews to understand why routines break down. The result splits the day into small colourful tasks and rewards progress with an evolving character. I led the team through design and planning and built a large part of the UI.",
+        built: [
+          { n: "01", txt: "Parent interviews and research synthesis" },
+          { n: "02", txt: "User journey and interactive prototypes in Figma" },
+          { n: "03", txt: "Task, reward and daily-progress screens" },
+          { n: "04", txt: "Usability testing and the iterations that followed" }
+        ],
+        outcomes: [{ v: "20", k: "Test participants" }, { v: "4", k: "Teammates led" }, { v: "A", k: "Project grade" }],
+        stack: ["Flutter", "Firebase", "UX Research", "Figma"], img: "assets/risha.png"
+      },
+      {
+        num: "03", status: "Design", title: "Guidor", latin: "GUIDOR — TRIP PLANNER",
+        desc: "A full trip-planner design in Figma: user journey, interactive prototype and a component system.",
+        tagline: "A trip planner: pick a destination, get stays and activities suggested, and build an editable day-by-day itinerary.",
+        facts: [{ k: "Role", v: "Product design" }, { k: "Year", v: "2024" }, { k: "Tool", v: "Figma" }, { k: "Type", v: "Concept" }],
+        overview: "A design project focused on the hardest part of travel apps: building the itinerary without overwhelming the user. I designed a short onboarding, a visual destination picker and a drag-and-drop daily plan.",
+        built: [
+          { n: "01", txt: "User journey map and information architecture" },
+          { n: "02", txt: "High-fidelity design across 18 screens" },
+          { n: "03", txt: "A complete, testable interactive prototype" },
+          { n: "04", txt: "Component library, colour and type system" }
+        ],
+        outcomes: [{ v: "18", k: "Screens designed" }, { v: "1", k: "Full prototype" }, { v: "UI", k: "Component system" }],
+        stack: ["Figma", "Prototyping", "UI Design"], img: "assets/guidor.png"
+      }
+    ]
+  }
+};
+
+class Component extends DCLogic {
+  state = { lang: "ar", view: null };
+
+  componentDidMount() { this.observe(); }
+  componentDidUpdate() { this.observe(); }
+  observe() {
+    if (!this._io) {
+      this._io = new IntersectionObserver((es) => {
+        es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); this._io.unobserve(e.target); } });
+      }, { threshold: 0.1 });
+    }
+    document.querySelectorAll('.rv:not(.in)').forEach(el => this._io.observe(el));
+  }
+
+  renderVals() {
+    const lang = this.state.lang;
+    const t = DATA[lang];
+    const skills = ["Flutter", "Dart", "Java", "JavaScript", "React", "Firebase", "APIs", "Database Management", "Git", "Figma", "UX Design", "Prototyping", "Usability Testing"];
+    const email = this.props.email || "Ghadah.alassmi@outlook.com";
+    const phone = "+966 59 462 5990";
+    const view = this.state.view;
+    const projects = t.projects.map((p, i) => ({
+      ...p,
+      open: () => { this.setState({ view: i }); window.scrollTo({ top: 0 }); }
+    }));
+    return {
+      t, skills, email, phone,
+      dir: lang === "ar" ? "rtl" : "ltr",
+      align: lang === "ar" ? "right" : "left",
+      mailto: "mailto:" + email,
+      tel: "tel:+966594625990",
+      linkedin: this.props.linkedin || "https://www.linkedin.com/in/ghadah-alassmi-98817737a",
+      ticker: skills.concat(skills),
+      specs: t.specs, timeline: t.timeline, certs: t.certs, projects,
+      isHome: view === null,
+      isDetail: view !== null,
+      proj: view === null ? t.projects[0] : t.projects[view],
+      goHome: () => this.setState({ view: null }),
+      nextProject: () => { this.setState({ view: ((view || 0) + 1) % t.projects.length }); window.scrollTo({ top: 0 }); },
+      toggleLang: () => this.setState({ lang: lang === "ar" ? "en" : "ar" })
+    };
+  }
+}
+</script>
+</body>
+</html>
