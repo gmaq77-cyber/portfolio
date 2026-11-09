@@ -5,51 +5,66 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Ghadah Alassmi — Portfolio</title>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700&family=Barlow:wght@300;400;500;600&family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Inter:wght@400;500;600;700;800&family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/styles.css">
 </head>
 <body class="ar">
 
-  <nav class="nav-bar">
-    <a href="#top" class="nav-brand en">GHADAH ALASSMI</a>
-    <div class="nav-right">
+  <div class="nav-wrap">
+    <nav class="nav-bar">
+      <a href="#top" class="nav-brand">Ghadah Alassmi</a>
       <div class="nav-links">
-        <a class="nav-link arh" href="#work" data-ar="المشاريع" data-en="Work">المشاريع</a>
-        <a class="nav-link arh" href="#about" data-ar="نبذة" data-en="About">نبذة</a>
-        <a class="nav-link arh" href="#path" data-ar="الخبرات والتعليم" data-en="Experience &amp; Education">الخبرات والتعليم</a>
+        <a class="nav-link arh" href="#work" data-ar="المشاريع" data-en="Work"><span class="dot"></span>المشاريع</a>
+        <a class="nav-link arh" href="#about" data-ar="نبذة" data-en="About"><span class="dot"></span>نبذة</a>
+        <a class="nav-link arh" href="#path" data-ar="الخبرات" data-en="Experience"><span class="dot"></span>الخبرات</a>
+        <a class="nav-link arh" href="#contact" data-ar="تواصل" data-en="Contact"><span class="dot"></span>تواصل</a>
       </div>
-      <button type="button" class="lang-btn en" data-lang-toggle>EN</button>
-      <a class="btn btn-solid nav-contact arh" href="#contact">تواصل</a>
-    </div>
-  </nav>
+      <div class="nav-actions">
+        <button type="button" class="lang-btn en" data-lang-toggle>EN</button>
+        <a class="btn btn-pill-dark nav-contact arh" href="assets/Ghadah-Alassmi-CV.pdf" target="_blank" data-ar="السيرة الذاتية" data-en="CV">السيرة الذاتية</a>
+      </div>
+    </nav>
+  </div>
 
   <section id="top" class="hero">
-    <div class="kicker mono">
-      <span class="kicker-dot"></span>
-      Available for full-time · 2026
-    </div>
-    <h1 class="hero-name en" data-align>GHADAH<br><span class="accent">ALASSMI</span></h1>
     <div class="hero-grid">
       <div>
-        <div class="hero-role arh" data-ar="مهندسة برمجيات ومطوّرة تطبيقات Flutter" data-en="Software engineer &amp; Flutter developer">مهندسة برمجيات ومطوّرة تطبيقات Flutter</div>
+        <div class="pill mono" style="margin-bottom:26px;">
+          <span class="dot-live"></span>
+          Available for full-time · 2026
+        </div>
+        <h1 class="hero-name">
+          <span class="en" style="font-weight:800;">Ghadah</span>
+          <span class="serif">Alassmi</span>
+        </h1>
+        <div class="hero-role">
+          <span class="pill arh" data-ar="مهندسة برمجيات ومطوّرة تطبيقات Flutter" data-en="Software engineer &amp; Flutter developer">مهندسة برمجيات ومطوّرة تطبيقات Flutter</span>
+        </div>
         <p class="hero-body ar" data-ar="سنة أخيرة في جامعة الأمير سطام بن عبدالعزيز، معدل 4.35 من 5، ومتدربة تعاونية. أبني تطبيقات موبايل من الفكرة حتى النشر." data-en="Final-year software engineering student at Prince Sattam bin Abdulaziz University, GPA 4.35/5, currently a co-op trainee. I build mobile apps end to end — from idea to the store.">سنة أخيرة في جامعة الأمير سطام بن عبدالعزيز، معدل 4.35 من 5، ومتدربة تعاونية. أبني تطبيقات موبايل من الفكرة حتى النشر.</p>
         <div class="hero-actions">
-          <a class="btn btn-solid blueprint arh" href="#work" data-ar="شوفي مشاريعي" data-en="View my work">شوفي مشاريعي<i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i></a>
-          <a class="btn btn-outline blueprint arh" href="assets/Ghadah-Alassmi-CV.pdf" target="_blank" data-ar="تحميل السيرة الذاتية" data-en="Download CV">تحميل السيرة الذاتية<i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i></a>
+          <a class="btn btn-solid arh" href="#work" data-ar="شوفي مشاريعي" data-en="View my work">شوفي مشاريعي</a>
+          <a class="btn btn-outline arh" href="assets/Ghadah-Alassmi-CV.pdf" target="_blank" data-ar="تحميل السيرة الذاتية" data-en="Download CV">تحميل السيرة الذاتية</a>
+          <a class="btn btn-outline en" href="https://www.linkedin.com/in/ghadah-alassmi-98817737a" target="_blank" rel="noreferrer">LinkedIn</a>
         </div>
       </div>
-      <div class="spec-grid">
-        <div class="spec-item">
-          <div class="spec-v en">4.35</div>
-          <div class="spec-k ar" data-ar="المعدل من 5" data-en="GPA out of 5">المعدل من 5</div>
+      <div class="hero-side">
+        <div class="hero-side-badge mono" style="text-transform:none; letter-spacing:0.02em;">
+          <span class="dot-live" style="background:var(--tan); box-shadow:0 0 0 3px color-mix(in srgb, var(--tan) 30%, transparent);"></span>
+          <span data-ar="بالأرقام" data-en="By the numbers">بالأرقام</span>
         </div>
-        <div class="spec-item">
-          <div class="spec-v en">03</div>
-          <div class="spec-k ar" data-ar="مشاريع" data-en="Projects">مشاريع</div>
-        </div>
-        <div class="spec-item">
-          <div class="spec-v en">2026</div>
-          <div class="spec-k ar" data-ar="سنة التخرج" data-en="Graduation">سنة التخرج</div>
+        <div class="spec-grid">
+          <div class="spec-item">
+            <span class="spec-v">4.35</span>
+            <span class="spec-k ar" data-ar="المعدل من 5" data-en="GPA out of 5">المعدل من 5</span>
+          </div>
+          <div class="spec-item">
+            <span class="spec-v">03</span>
+            <span class="spec-k ar" data-ar="مشاريع" data-en="Projects">مشاريع</span>
+          </div>
+          <div class="spec-item">
+            <span class="spec-v">2026</span>
+            <span class="spec-k ar" data-ar="سنة التخرج" data-en="Graduation">سنة التخرج</span>
+          </div>
         </div>
       </div>
     </div>
@@ -59,140 +74,136 @@
     <div class="marquee" dir="ltr" id="ticker"></div>
   </div>
 
-  <section id="work" class="section-work">
+  <section id="work" class="section">
     <div class="section-head">
-      <h2 class="section-title arh" data-ar="المشاريع" data-en="Work">المشاريع</h2>
-      <span class="mono" style="color:var(--color-accent-400);">03 projects · 2024—2026</span>
+      <div>
+        <div class="mono section-kicker" data-ar="أعمالي" data-en="Selected work">أعمالي</div>
+        <h2 class="section-title arh" data-ar="المشاريع" data-en="Work">المشاريع</h2>
+      </div>
+      <span class="tag tag-outline en">03 projects · 2024—2026</span>
     </div>
 
-    <a class="work-row rv" href="projects/twaqq.html">
-      <span class="work-row-bg"></span>
-      <div class="work-row-grid">
-        <span class="work-num en">01</span>
-        <div>
+    <div class="work-grid">
+
+      <a class="work-card rv" href="projects/twaqq.html">
+        <div class="work-cover">
+          <span class="work-num">01</span>
+          <img src="assets/twaqq/1.png" alt="Twaqq">
+        </div>
+        <div class="work-body">
           <div class="work-title-row">
             <h3 class="work-title arh" data-ar="توقَّع (Twaqq)" data-en="Twaqq">توقَّع (Twaqq)</h3>
-            <span class="tag-solid ar" data-ar="منشور" data-en="Live">منشور</span>
+            <span class="tag tag-rust ar" data-ar="منشور" data-en="Live">منشور</span>
           </div>
-          <div class="work-latin en">TWAQQ — SPORTS PREDICTIONS</div>
+          <div class="work-latin">TWAQQ — SPORTS PREDICTIONS</div>
           <p class="work-desc ar" data-ar="تطبيق تنبّؤات رياضية منشور على المتاجر: توقعات المباريات، نقاط، وتصنيف بين المستخدمين." data-en="A published sports prediction app: match forecasts, points and a live leaderboard.">تطبيق تنبّؤات رياضية منشور على المتاجر: توقعات المباريات، نقاط، وتصنيف بين المستخدمين.</p>
           <div class="work-tags">
-            <span class="stack-tag en">Flutter</span>
-            <span class="stack-tag en">Dart</span>
-            <span class="stack-tag en">Firebase</span>
-            <span class="stack-tag en">Figma</span>
-            <span class="work-go arh" data-ar="تفاصيل المشروع →" data-en="View case study →">تفاصيل المشروع →</span>
+            <span class="stack-chip en">Flutter</span>
+            <span class="stack-chip en">Dart</span>
+            <span class="stack-chip en">Firebase</span>
           </div>
+          <span class="work-go arh" data-ar="تفاصيل المشروع" data-en="View case study"><span data-ar="تفاصيل المشروع" data-en="View case study">تفاصيل المشروع</span><span class="arrow">←</span></span>
         </div>
-        <div class="blueprint dark work-shot-frame">
-          <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
-          <img class="work-shot" src="assets/twaqq.png" alt="Twaqq">
-        </div>
-      </div>
-    </a>
+      </a>
 
-    <a class="work-row rv" href="projects/risha.html">
-      <span class="work-row-bg"></span>
-      <div class="work-row-grid">
-        <span class="work-num en">02</span>
-        <div>
+      <a class="work-card rv" href="projects/risha.html">
+        <div class="work-cover">
+          <span class="work-num">02</span>
+          <img src="assets/risha/1.png" alt="Risha">
+        </div>
+        <div class="work-body">
           <div class="work-title-row">
             <h3 class="work-title arh" data-ar="ريشة (Risha)" data-en="Risha">ريشة (Risha)</h3>
-            <span class="tag-solid ar" data-ar="مشروع التخرج" data-en="Graduation project">مشروع التخرج</span>
+            <span class="tag tag-tan ar" data-ar="مشروع التخرج" data-en="Graduation">مشروع التخرج</span>
           </div>
-          <div class="work-latin en">RISHA — KIDS ROUTINE APP</div>
+          <div class="work-latin">RISHA — KIDS ROUTINE APP</div>
           <p class="work-desc ar" data-ar="تطبيق للأطفال يحوّل الروتين اليومي إلى لعبة بمهام ومكافآت، مبني على أبحاث واختبارات قابلية استخدام." data-en="A kids app that turns the daily routine into a game of tasks and rewards, grounded in research and usability testing.">تطبيق للأطفال يحوّل الروتين اليومي إلى لعبة بمهام ومكافآت، مبني على أبحاث واختبارات قابلية استخدام.</p>
           <div class="work-tags">
-            <span class="stack-tag en">Flutter</span>
-            <span class="stack-tag en">Firebase</span>
-            <span class="stack-tag en">UX Research</span>
-            <span class="stack-tag en">Figma</span>
-            <span class="work-go arh" data-ar="تفاصيل المشروع →" data-en="View case study →">تفاصيل المشروع →</span>
+            <span class="stack-chip en">Flutter</span>
+            <span class="stack-chip en">Firebase</span>
+            <span class="stack-chip en">UX Research</span>
           </div>
+          <span class="work-go arh"><span data-ar="تفاصيل المشروع" data-en="View case study">تفاصيل المشروع</span><span class="arrow">←</span></span>
         </div>
-        <div class="blueprint dark work-shot-frame">
-          <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
-          <img class="work-shot" src="assets/risha.png" alt="Risha">
-        </div>
-      </div>
-    </a>
+      </a>
 
-    <a class="work-row rv" href="projects/guidor.html">
-      <span class="work-row-bg"></span>
-      <div class="work-row-grid">
-        <span class="work-num en">03</span>
-        <div>
+      <a class="work-card rv" href="projects/guidor.html">
+        <div class="work-cover">
+          <span class="work-num">03</span>
+          <img src="assets/guidor/1.png" alt="Guidor">
+        </div>
+        <div class="work-body">
           <div class="work-title-row">
             <h3 class="work-title arh en">Guidor</h3>
-            <span class="tag-solid ar" data-ar="تصميم" data-en="Design">تصميم</span>
+            <span class="tag tag-olive ar" data-ar="تصميم" data-en="Design">تصميم</span>
           </div>
-          <div class="work-latin en">GUIDOR — TRIP PLANNER</div>
+          <div class="work-latin">GUIDOR — TRIP PLANNER</div>
           <p class="work-desc ar" data-ar="تصميم كامل لتطبيق تخطيط الرحلات في Figma: رحلة المستخدم، النماذج التفاعلية، ونظام المكونات." data-en="A full trip-planner design in Figma: user journey, interactive prototype and a component system.">تصميم كامل لتطبيق تخطيط الرحلات في Figma: رحلة المستخدم، النماذج التفاعلية، ونظام المكونات.</p>
           <div class="work-tags">
-            <span class="stack-tag en">Figma</span>
-            <span class="stack-tag en">Prototyping</span>
-            <span class="stack-tag en">UI Design</span>
-            <span class="work-go arh" data-ar="تفاصيل المشروع →" data-en="View case study →">تفاصيل المشروع →</span>
+            <span class="stack-chip en">Figma</span>
+            <span class="stack-chip en">Prototyping</span>
+            <span class="stack-chip en">UI Design</span>
           </div>
+          <span class="work-go arh"><span data-ar="تفاصيل المشروع" data-en="View case study">تفاصيل المشروع</span><span class="arrow">←</span></span>
         </div>
-        <div class="blueprint dark work-shot-frame">
-          <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
-          <img class="work-shot" src="assets/guidor.png" alt="Guidor">
-        </div>
-      </div>
-    </a>
+      </a>
+
+    </div>
   </section>
 
-  <section id="about" class="section-light">
-    <div class="section-light-2col">
+  <section id="about" class="section">
+    <div class="about-grid">
       <div>
-        <div class="mono about-label" data-ar="نبذة" data-en="About">نبذة</div>
-        <p class="about-lead arh" data-ar="أحب المسافة القصيرة بين الفكرة والمنتج — أصمّم في Figma وأكتبها كوداً بـ Flutter." data-en="I like the short distance between an idea and a product — I design it in Figma, then write it in Flutter.">أحب المسافة القصيرة بين الفكرة والمنتج — أصمّم في Figma وأكتبها كوداً بـ Flutter.</p>
+        <div class="mono section-kicker" data-ar="نبذة" data-en="About">نبذة</div>
+        <p class="about-lead" data-ar="أحب المسافة القصيرة بين الفكرة والمنتج — أصمّم في Figma وأكتبها كوداً بـ Flutter." data-en="I like the short distance between an idea and a product — I design it in Figma, then write it in Flutter.">أحب المسافة القصيرة بين الفكرة والمنتج — أصمّم في Figma وأكتبها كوداً بـ Flutter.</p>
         <p class="about-body ar" data-ar="بدأت من البرمجة في الجامعة ثم وقعت في حب تصميم التجربة، فصرت أشتغل على الطرفين. حالياً متدربة تعاونية أعمل ضمن فريق على منتجات حقيقية، وأتعلم كيف يتحول الكود إلى شيء يستخدمه الناس فعلاً كل يوم." data-en="I started with programming at university, then fell for experience design, so now I work on both sides. As a co-op trainee I work inside a product team on real software, learning how code turns into something people actually use every day.">بدأت من البرمجة في الجامعة ثم وقعت في حب تصميم التجربة، فصرت أشتغل على الطرفين. حالياً متدربة تعاونية أعمل ضمن فريق على منتجات حقيقية، وأتعلم كيف يتحول الكود إلى شيء يستخدمه الناس فعلاً كل يوم.</p>
       </div>
-      <div>
-        <div class="mono about-label" data-ar="المهارات" data-en="Skills">المهارات</div>
-        <div style="display:flex; flex-wrap:wrap; gap:8px;">
-          <span class="skill-tag en">Flutter</span>
-          <span class="skill-tag en">Dart</span>
-          <span class="skill-tag en">Java</span>
-          <span class="skill-tag en">JavaScript</span>
-          <span class="skill-tag en">React</span>
-          <span class="skill-tag en">Firebase</span>
-          <span class="skill-tag en">APIs</span>
-          <span class="skill-tag en">Database Management</span>
-          <span class="skill-tag en">Git</span>
-          <span class="skill-tag en">Figma</span>
-          <span class="skill-tag en">UX Design</span>
-          <span class="skill-tag en">Prototyping</span>
-          <span class="skill-tag en">Usability Testing</span>
+      <div class="skills-card">
+        <div class="mono section-kicker" data-ar="المهارات" data-en="Skills">المهارات</div>
+        <div class="skill-chips">
+          <span class="tag tag-outline en">Flutter</span>
+          <span class="tag tag-outline en">Dart</span>
+          <span class="tag tag-outline en">Java</span>
+          <span class="tag tag-outline en">JavaScript</span>
+          <span class="tag tag-outline en">React</span>
+          <span class="tag tag-outline en">Firebase</span>
+          <span class="tag tag-outline en">APIs</span>
+          <span class="tag tag-outline en">Database Management</span>
+          <span class="tag tag-outline en">Git</span>
+          <span class="tag tag-outline en">Figma</span>
+          <span class="tag tag-outline en">UX Design</span>
+          <span class="tag tag-outline en">Prototyping</span>
+          <span class="tag tag-outline en">Usability Testing</span>
         </div>
       </div>
     </div>
   </section>
 
-  <section id="path" class="section-light section-path">
+  <section id="path" class="section">
     <div class="path-grid">
       <div>
         <h2 class="path-title arh" data-ar="الخبرات والتعليم" data-en="Experience &amp; Education">الخبرات والتعليم</h2>
 
         <div class="timeline-item">
-          <span class="timeline-when en">2026 —</span>
+          <div class="timeline-dot-col"><span class="timeline-dot"></span></div>
           <div>
+            <span class="timeline-when">2026 —</span>
             <div class="timeline-title arh" data-ar="متدربة تعاونية — تطوير تطبيقات" data-en="Co-op trainee — App development">متدربة تعاونية — تطوير تطبيقات</div>
             <div class="timeline-org ar" data-ar="تطوير وصيانة تطبيقات موبايل ضمن فريق المنتج" data-en="Building and maintaining mobile apps inside a product team">تطوير وصيانة تطبيقات موبايل ضمن فريق المنتج</div>
           </div>
         </div>
         <div class="timeline-item">
-          <span class="timeline-when en">2022 — 2026</span>
+          <div class="timeline-dot-col"><span class="timeline-dot"></span></div>
           <div>
+            <span class="timeline-when">2022 — 2026</span>
             <div class="timeline-title arh" data-ar="بكالوريوس هندسة البرمجيات" data-en="BSc Software Engineering">بكالوريوس هندسة البرمجيات</div>
             <div class="timeline-org ar" data-ar="جامعة الأمير سطام بن عبدالعزيز · معدل 4.35 من 5" data-en="Prince Sattam bin Abdulaziz University · GPA 4.35/5">جامعة الأمير سطام بن عبدالعزيز · معدل 4.35 من 5</div>
           </div>
         </div>
         <div class="timeline-item">
-          <span class="timeline-when en">2025</span>
+          <div class="timeline-dot-col"><span class="timeline-dot"></span></div>
           <div>
+            <span class="timeline-when">2025</span>
             <div class="timeline-title arh" data-ar="مشروع التخرج — ريشة" data-en="Graduation project — Risha">مشروع التخرج — ريشة</div>
             <div class="timeline-org ar" data-ar="قيادة الفريق من التصميم حتى التسليم" data-en="Led the team from design through delivery">قيادة الفريق من التصميم حتى التسليم</div>
           </div>
@@ -202,20 +213,26 @@
       <div>
         <h2 class="path-title arh" data-ar="الشهادات" data-en="Certificates">الشهادات</h2>
 
-        <div class="blueprint cert-card">
-          <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
-          <div class="cert-name en">Meta Front-End Developer</div>
-          <div class="cert-meta ar" data-ar="Meta · ديسمبر 2025 · 9 دورات + مشروع ختامي" data-en="Meta · Dec 2025 · 9 courses + capstone">Meta · ديسمبر 2025 · 9 دورات + مشروع ختامي</div>
+        <div class="cert-card">
+          <div>
+            <div class="cert-name en">Meta Front-End Developer</div>
+            <div class="cert-meta ar" data-ar="Meta · ديسمبر 2025 · 9 دورات + مشروع ختامي" data-en="Meta · Dec 2025 · 9 courses + capstone">Meta · ديسمبر 2025 · 9 دورات + مشروع ختامي</div>
+          </div>
+          <div class="cert-icon">✓</div>
         </div>
-        <div class="blueprint cert-card">
-          <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
-          <div class="cert-name en">High-Fidelity Designs in Figma</div>
-          <div class="cert-meta ar" data-ar="شهادة تصميم" data-en="Design certificate">شهادة تصميم</div>
+        <div class="cert-card">
+          <div>
+            <div class="cert-name en">High-Fidelity Designs in Figma</div>
+            <div class="cert-meta ar" data-ar="شهادة تصميم" data-en="Design certificate">شهادة تصميم</div>
+          </div>
+          <div class="cert-icon">✓</div>
         </div>
-        <div class="blueprint cert-card">
-          <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
-          <div class="cert-name en">Wireframes &amp; Low-Fi Prototypes</div>
-          <div class="cert-meta ar" data-ar="شهادة تصميم" data-en="Design certificate">شهادة تصميم</div>
+        <div class="cert-card">
+          <div>
+            <div class="cert-name en">Wireframes &amp; Low-Fi Prototypes</div>
+            <div class="cert-meta ar" data-ar="شهادة تصميم" data-en="Design certificate">شهادة تصميم</div>
+          </div>
+          <div class="cert-icon">✓</div>
         </div>
       </div>
     </div>
@@ -223,13 +240,13 @@
 
   <section id="contact" class="section-contact">
     <div class="mono contact-label">Get in touch</div>
-    <h2 class="contact-title arh" data-ar="خلونا نشتغل مع بعض." data-en="Let's build something.">خلونا نشتغل مع بعض.</h2>
+    <h2 class="contact-title" data-ar="خلونا نشتغل مع بعض." data-en="Let's build something.">خلونا نشتغل مع بعض.</h2>
     <p class="contact-body ar" data-ar="أبحث عن فرصة بدوام كامل في تطوير تطبيقات الموبايل أو الواجهات." data-en="I'm looking for a full-time role in mobile or front-end development.">أبحث عن فرصة بدوام كامل في تطوير تطبيقات الموبايل أو الواجهات.</p>
     <div class="contact-actions">
-      <a class="btn btn-solid blueprint en" href="mailto:Ghadah.alassmi@outlook.com">Ghadah.alassmi@outlook.com<i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i></a>
-      <a class="btn btn-outline blueprint en tel" href="tel:+966594625990">+966 59 462 5990<i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i></a>
-      <a class="btn btn-outline blueprint en" href="https://www.linkedin.com/in/ghadah-alassmi-98817737a" target="_blank" rel="noreferrer">LinkedIn<i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i></a>
-      <a class="btn btn-outline blueprint arh" href="assets/Ghadah-Alassmi-CV.pdf" target="_blank" data-ar="تحميل السيرة الذاتية" data-en="Download CV">تحميل السيرة الذاتية<i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i></a>
+      <a class="btn btn-solid en" href="mailto:Ghadah.alassmi@outlook.com">Ghadah.alassmi@outlook.com</a>
+      <a class="btn btn-outline en" href="tel:+966594625990" style="direction:ltr;">+966 59 462 5990</a>
+      <a class="btn btn-outline en" href="https://www.linkedin.com/in/ghadah-alassmi-98817737a" target="_blank" rel="noreferrer">LinkedIn</a>
+      <a class="btn btn-outline arh" href="assets/Ghadah-Alassmi-CV.pdf" target="_blank" data-ar="تحميل السيرة الذاتية" data-en="Download CV">تحميل السيرة الذاتية</a>
     </div>
   </section>
 

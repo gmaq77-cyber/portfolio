@@ -39,6 +39,39 @@
     els.forEach(function (el) { io.observe(el); });
   }
 
+  function initLightbox() {
+    var frames = document.querySelectorAll('.gallery-frame img');
+    if (!frames.length) return;
+
+    var overlay = document.createElement('div');
+    overlay.className = 'lightbox';
+    var img = document.createElement('img');
+    var closeBtn = document.createElement('button');
+    closeBtn.type = 'button';
+    closeBtn.className = 'lightbox-close';
+    closeBtn.setAttribute('aria-label', 'Close');
+    closeBtn.textContent = '×';
+    overlay.appendChild(img);
+    overlay.appendChild(closeBtn);
+    document.body.appendChild(overlay);
+
+    function open(src, alt) {
+      img.src = src;
+      img.alt = alt || '';
+      overlay.classList.add('open');
+    }
+    function close() {
+      overlay.classList.remove('open');
+    }
+
+    frames.forEach(function (el) {
+      el.addEventListener('click', function () { open(el.src, el.alt); });
+    });
+    overlay.addEventListener('click', function (e) { if (e.target === overlay) close(); });
+    closeBtn.addEventListener('click', close);
+    document.addEventListener('keydown', function (e) { if (e.key === 'Escape') close(); });
+  }
+
   document.addEventListener('DOMContentLoaded', function () {
     setLang(getLang());
     var toggle = document.querySelector('[data-lang-toggle]');
@@ -48,5 +81,6 @@
       });
     }
     initReveal();
+    initLightbox();
   });
 })();
