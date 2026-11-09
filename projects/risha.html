@@ -3,155 +3,145 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Risha — Ghadah Alassmi</title>
+<title>Risha | Ghadah Alassmi</title>
+<meta name="theme-color" content="#f8f6f3">
+<link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Inter:wght@400;500;600;700;800&family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../css/styles.css">
+<link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@400;500;600;700;800&family=IBM+Plex+Sans+Arabic:wght@400;500;600&family=Aref+Ruqaa:wght@700&family=Playfair+Display:ital,wght@1,700&display=swap" rel="stylesheet">
+<script src="https://unpkg.com/@phosphor-icons/web@2.1.1"></script>
+<link rel="stylesheet" href="../css/site.css">
 </head>
-<body class="ar">
+<body>
+<a class="skip" href="#main" data-ar="تخطَّ إلى المحتوى" data-en="Skip to content">تخطَّ إلى المحتوى</a>
 
-  <div class="nav-wrap">
-    <nav class="nav-bar">
-      <a href="../index.html#top" class="nav-brand">Ghadah Alassmi</a>
-      <div class="nav-links">
-        <a class="nav-link arh" href="../index.html#work" data-ar="المشاريع" data-en="Work"><span class="dot"></span>المشاريع</a>
-        <a class="nav-link arh" href="../index.html#about" data-ar="نبذة" data-en="About"><span class="dot"></span>نبذة</a>
-        <a class="nav-link arh" href="../index.html#path" data-ar="الخبرات" data-en="Experience"><span class="dot"></span>الخبرات</a>
-        <a class="nav-link arh" href="#contact" data-ar="تواصل" data-en="Contact"><span class="dot"></span>تواصل</a>
-      </div>
-      <div class="nav-actions">
-        <button type="button" class="lang-btn en" data-lang-toggle>EN</button>
-        <a class="btn btn-pill-dark nav-contact arh" href="../assets/Ghadah-Alassmi-CV.pdf" target="_blank" data-ar="السيرة الذاتية" data-en="CV">السيرة الذاتية</a>
-      </div>
+<header class="nav">
+  <div class="wrap nav-in">
+    <a href="../index.html" class="brand" aria-label="Ghadah Alassmi">GHADAH<b>.</b></a>
+    <nav class="nav-pill" aria-label="Primary">
+      <a href="../index.html" data-ar="الرئيسية" data-en="Home">الرئيسية</a>
+      <a href="../index.html#work" class="is-active" data-ar="أعمالي" data-en="Work">أعمالي</a>
+      <a href="../index.html#skills" data-ar="مهاراتي" data-en="Skills">مهاراتي</a>
+      <a href="../index.html#about" data-ar="نبذة" data-en="About">نبذة</a>
     </nav>
-  </div>
-
-  <section class="detail-hero">
-    <a href="../index.html#work" class="back-btn arh" data-ar="← رجوع" data-en="← Back">← رجوع</a>
-
-    <div class="detail-title-row">
-      <div>
-        <div class="mono">RISHA — KIDS ROUTINE APP</div>
-        <h1 class="detail-title arh" data-ar="ريشة (Risha)" data-en="Risha">ريشة (Risha)</h1>
-        <p class="detail-tagline ar" data-ar="مشروع التخرج: تطبيق يساعد الأطفال على بناء روتين يومي صحي عبر مهام ومكافآت ورفيق كرتوني يتقدّم معهم." data-en="My graduation project: an app that helps children build a healthy daily routine through tasks, rewards and a companion character that grows with them.">مشروع التخرج: تطبيق يساعد الأطفال على بناء روتين يومي صحي عبر مهام ومكافآت ورفيق كرتوني يتقدّم معهم.</p>
-      </div>
-      <div class="tag tag-tan ar" style="justify-self:start;" data-ar="مشروع التخرج" data-en="Graduation project">مشروع التخرج</div>
-    </div>
-
-    <div class="fact-grid">
-      <div class="fact-item">
-        <div class="mono fact-k">Role</div>
-        <div class="fact-v arh" data-ar="قائدة الفريق" data-en="Team lead">قائدة الفريق</div>
-      </div>
-      <div class="fact-item">
-        <div class="mono fact-k">Year</div>
-        <div class="fact-v en">2025 — 2026</div>
-      </div>
-      <div class="fact-item">
-        <div class="mono fact-k">Users</div>
-        <div class="fact-v arh" data-ar="أطفال 5–10" data-en="Kids 5–10">أطفال 5–10</div>
-      </div>
-      <div class="fact-item">
-        <div class="mono fact-k">Type</div>
-        <div class="fact-v arh" data-ar="مشروع تخرج" data-en="Graduation project">مشروع تخرج</div>
-      </div>
-    </div>
-  </section>
-
-  <div class="gallery-wrap">
-    <div class="gallery">
-      <div class="gallery-frame"><img src="../assets/risha/1.png" alt="Risha screen 1"></div>
+    <div class="nav-end">
+      <button type="button" class="lang" data-lang-toggle aria-label="Switch language">EN</button>
+      <a class="btn btn-dark" href="#contact"><span data-ar="تواصل معي" data-en="Contact">تواصل معي</span><span class="ic"><i class="ph-bold ph-arrow-up-right flip" aria-hidden="true"></i></span></a>
+      <button type="button" class="menu-btn" aria-label="Menu" aria-expanded="false" aria-controls="menu"><i class="ph-bold ph-list" aria-hidden="true"></i></button>
     </div>
   </div>
+  <div class="menu" id="menu">
+    <a href="../index.html" data-ar="الرئيسية" data-en="Home">الرئيسية</a>
+    <a href="../index.html#work" data-ar="أعمالي" data-en="Work">أعمالي</a>
+    <a href="../index.html#skills" data-ar="مهاراتي" data-en="Skills">مهاراتي</a>
+    <a href="../index.html#about" data-ar="نبذة" data-en="About">نبذة</a>
+    <a href="#contact" data-ar="تواصل معي" data-en="Contact">تواصل معي</a>
+    <button type="button" class="lang" data-lang-toggle aria-label="Switch language">EN</button>
+  </div>
+</header>
 
-  <section class="detail-body">
-    <div class="detail-grid">
+<main id="main">
+  <section class="d-hero">
+    <div class="wrap">
+      <a href="../index.html#work" class="back"><i class="ph-bold ph-arrow-right flip-back" aria-hidden="true"></i><span data-ar="كل المشاريع" data-en="All projects">كل المشاريع</span></a>
+      <div class="d-head">
+        <h1 data-ar="ريشة، روتين يومي &lt;span class=&quot;em&quot;&gt;على شكل لعبة.&lt;/span&gt;" data-en="Risha, a daily routine &lt;span class=&quot;em&quot;&gt;that feels like play.&lt;/span&gt;">ريشة، روتين يومي <span class="em">على شكل لعبة.</span></h1>
+        <p data-ar="مشروع التخرج: تطبيق يساعد الأطفال على بناء روتين يومي صحي عبر مهام ومكافآت ورفيق كرتوني يكبر معهم." data-en="My graduation project: an app that helps children build a healthy daily routine through tasks, rewards and a companion character that grows with them.">مشروع التخرج: تطبيق يساعد الأطفال على بناء روتين يومي صحي عبر مهام ومكافآت ورفيق كرتوني يكبر معهم.</p>
+      </div>
+      <div class="facts">
+        <div class="fact f-pink"><span data-ar="الدور" data-en="Role">الدور</span><strong data-ar="قائدة الفريق" data-en="Team lead">قائدة الفريق</strong></div>
+        <div class="fact f-yellow"><span data-ar="الفترة" data-en="Period">الفترة</span><strong class="latin" style="text-align:start">2025 - 2026</strong></div>
+        <div class="fact f-purple"><span data-ar="الفئة" data-en="Audience">الفئة</span><strong data-ar="أطفال 5 - 10" data-en="Kids 5 - 10">أطفال 5 - 10</strong></div>
+        <div class="fact f-teal"><span data-ar="النوع" data-en="Type">النوع</span><strong data-ar="مشروع تخرج" data-en="Graduation project">مشروع تخرج</strong></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="on-plum gallery-band">
+    <div class="gallery single" dir="ltr">
+      <button type="button" aria-label="Open screen 1"><img src="../assets/risha/1.png" alt="Risha screen" width="221" height="465"></button>
+    </div>
+  </div>
+  <div class="stripes" aria-hidden="true"></div>
+
+  <section class="sec">
+    <div class="wrap d-body">
       <div>
-        <h2 class="detail-h2 arh" data-ar="نظرة عامة" data-en="Overview">نظرة عامة</h2>
-        <p class="detail-overview ar" data-ar="بدأنا بأبحاث مع أولياء الأمور لفهم صعوبة بناء الروتين عند الأطفال. النتيجة تطبيق يقسّم اليوم إلى مهام صغيرة ملوّنة، ويكافئ الطفل على الإنجاز بشخصية تتطور معه. قدت الفريق في التصميم والتخطيط وكتبت جزءاً كبيراً من الواجهات." data-en="We started with parent interviews to understand why routines break down. The result splits the day into small colourful tasks and rewards progress with an evolving character. I led the team through design and planning and built a large part of the UI.">بدأنا بأبحاث مع أولياء الأمور لفهم صعوبة بناء الروتين عند الأطفال. النتيجة تطبيق يقسّم اليوم إلى مهام صغيرة ملوّنة، ويكافئ الطفل على الإنجاز بشخصية تتطور معه. قدت الفريق في التصميم والتخطيط وكتبت جزءاً كبيراً من الواجهات.</p>
+        <h2 data-ar="نظرة عامة" data-en="Overview">نظرة عامة</h2>
+        <p class="overview" data-ar="بدأنا بأبحاث مع أولياء الأمور لفهم ليش يصعب بناء الروتين عند الأطفال. النتيجة تطبيق يقسّم اليوم إلى مهام صغيرة ملوّنة، ويكافئ الطفل على الإنجاز بشخصية تتطور معه. قدت الفريق في التصميم والتخطيط، وكتبت جزءاً كبيراً من الواجهات." data-en="We started with parent interviews to understand why routines break down. The result splits the day into small colourful tasks and rewards progress with an evolving character. I led the team through design and planning and built a large part of the UI.">بدأنا بأبحاث مع أولياء الأمور لفهم ليش يصعب بناء الروتين عند الأطفال. النتيجة تطبيق يقسّم اليوم إلى مهام صغيرة ملوّنة، ويكافئ الطفل على الإنجاز بشخصية تتطور معه. قدت الفريق في التصميم والتخطيط، وكتبت جزءاً كبيراً من الواجهات.</p>
 
-        <h2 class="detail-h2 arh" data-ar="ما بنيته" data-en="What I built">ما بنيته</h2>
-        <div class="built-list">
-          <div class="built-item">
-            <span class="built-n en">01</span>
-            <span class="built-txt ar" data-ar="أبحاث ومقابلات مع أولياء الأمور وتحليل النتائج" data-en="Parent interviews and research synthesis">أبحاث ومقابلات مع أولياء الأمور وتحليل النتائج</span>
-          </div>
-          <div class="built-item">
-            <span class="built-n en">02</span>
-            <span class="built-txt ar" data-ar="رحلة المستخدم والنماذج التفاعلية في Figma" data-en="User journey and interactive prototypes in Figma">رحلة المستخدم والنماذج التفاعلية في Figma</span>
-          </div>
-          <div class="built-item">
-            <span class="built-n en">03</span>
-            <span class="built-txt ar" data-ar="واجهات المهام والمكافآت وشريط التقدم اليومي" data-en="Task, reward and daily-progress screens">واجهات المهام والمكافآت وشريط التقدم اليومي</span>
-          </div>
-          <div class="built-item">
-            <span class="built-n en">04</span>
-            <span class="built-txt ar" data-ar="اختبارات قابلية استخدام وتعديلات بناءً عليها" data-en="Usability testing and the iterations that followed">اختبارات قابلية استخدام وتعديلات بناءً عليها</span>
-          </div>
+        <h2 data-ar="وش بنيت" data-en="What I built">وش بنيت</h2>
+        <div class="built">
+          <div><b>01</b><span data-ar="أبحاث ومقابلات مع أولياء الأمور وتحليل النتائج." data-en="Parent interviews and research synthesis.">أبحاث ومقابلات مع أولياء الأمور وتحليل النتائج.</span></div>
+          <div><b>02</b><span data-ar="رحلة المستخدم والنماذج التفاعلية في Figma." data-en="User journey and interactive prototypes in Figma.">رحلة المستخدم والنماذج التفاعلية في Figma.</span></div>
+          <div><b>03</b><span data-ar="واجهات المهام والمكافآت وشريط التقدم اليومي." data-en="Task, reward and daily-progress screens.">واجهات المهام والمكافآت وشريط التقدم اليومي.</span></div>
+          <div><b>04</b><span data-ar="اختبارات قابلية استخدام وتعديلات بناءً عليها." data-en="Usability testing and the iterations that followed.">اختبارات قابلية استخدام وتعديلات بناءً عليها.</span></div>
         </div>
 
-        <h2 class="detail-h2 arh" data-ar="النتائج" data-en="Outcomes">النتائج</h2>
-        <div class="outcomes-grid">
-          <div class="outcome-card">
-            <div class="outcome-v en">20</div>
-            <div class="outcome-k ar" data-ar="مستخدم في الاختبارات" data-en="Test participants">مستخدم في الاختبارات</div>
-          </div>
-          <div class="outcome-card">
-            <div class="outcome-v en">4</div>
-            <div class="outcome-k ar" data-ar="أعضاء الفريق بقيادتي" data-en="Teammates led">أعضاء الفريق بقيادتي</div>
-          </div>
-          <div class="outcome-card">
-            <div class="outcome-v en">A</div>
-            <div class="outcome-k ar" data-ar="تقييم المشروع" data-en="Project grade">تقييم المشروع</div>
-          </div>
+        <h2 data-ar="النتيجة" data-en="Outcome">النتيجة</h2>
+        <div class="outcomes">
+          <div class="outcome s-pink"><strong>20</strong><span data-ar="مشارك في الاختبارات" data-en="Test participants">مشارك في الاختبارات</span></div>
+          <div class="outcome s-purple"><strong>4</strong><span data-ar="أعضاء الفريق بقيادتي" data-en="Teammates led">أعضاء الفريق بقيادتي</span></div>
+          <div class="outcome s-teal"><strong>A</strong><span data-ar="تقييم المشروع" data-en="Project grade">تقييم المشروع</span></div>
         </div>
       </div>
 
-      <div class="detail-side">
-        <div class="detail-side-card">
-          <div class="mono detail-stack-label" data-ar="التقنيات" data-en="Stack">التقنيات</div>
-          <div style="display:flex; flex-wrap:wrap; gap:8px;">
-            <span class="stack-chip en">Flutter</span>
-            <span class="stack-chip en">Firebase</span>
-            <span class="stack-chip en">UX Research</span>
-            <span class="stack-chip en">Figma</span>
+      <aside class="side">
+        <div class="side-card">
+          <h3 data-ar="التقنيات" data-en="Stack">التقنيات</h3>
+          <div class="tags"><span class="tag">Flutter</span><span class="tag">Firebase</span><span class="tag">UX Research</span><span class="tag">Figma</span></div>
+        </div>
+        <div class="side-card">
+          <h3 data-ar="روابط المشروع" data-en="Links">روابط المشروع</h3>
+          <div class="link-row">
+            <a class="btn btn-dark" href="https://share.google/pSSq7KUy9GyaLDvNt" target="_blank" rel="noopener"><span data-ar="العرض التقديمي" data-en="Presentation">العرض التقديمي</span><span class="ic"><i class="ph-bold ph-presentation-chart" aria-hidden="true"></i></span></a>
+            <a class="btn btn-light" href="https://github.com/shahalt-web/Risha-GP2.git" target="_blank" rel="noopener"><span data-ar="الكود على GitHub" data-en="Code on GitHub">الكود على GitHub</span><span class="ic"><i class="ph-bold ph-github-logo" aria-hidden="true"></i></span></a>
           </div>
         </div>
-        <div class="detail-side-card">
-          <div class="mono detail-stack-label" data-ar="روابط المشروع" data-en="Links">روابط المشروع</div>
-          <div style="display:flex; flex-wrap:wrap; gap:8px;">
-            <a class="btn btn-outline btn-sm en" href="https://share.google/pSSq7KUy9GyaLDvNt" target="_blank" rel="noreferrer">Figma</a>
-            <a class="btn btn-outline btn-sm en" href="https://github.com/shahalt-web/Risha-GP2.git" target="_blank" rel="noreferrer">GitHub</a>
-          </div>
-        </div>
+      </aside>
+    </div>
+  </section>
+
+  <section class="sec" style="padding-top:0">
+    <div class="wrap next">
+      <a href="../index.html#work" class="back"><i class="ph-bold ph-arrow-right flip-back" aria-hidden="true"></i><span data-ar="كل المشاريع" data-en="All projects">كل المشاريع</span></a>
+      <a href="guidor.html" class="btn btn-dark"><span data-ar="المشروع التالي: Guidor" data-en="Next: Guidor">المشروع التالي: Guidor</span><span class="ic"><i class="ph-bold ph-arrow-left flip-next" aria-hidden="true"></i></span></a>
+    </div>
+  </section>
+</main>
+
+<footer class="footer" id="contact">
+  <div class="wrap">
+    <div class="foot-top">
+      <div class="foot-brand">
+        <a href="../index.html" class="brand">GHADAH<b>.</b></a>
+        <p data-ar="مهندسة برمجيات ومطوّرة تطبيقات Flutter." data-en="Software engineer and Flutter developer.">مهندسة برمجيات ومطوّرة تطبيقات Flutter.</p>
+      </div>
+      <div class="foot-col">
+        <h4 data-ar="الموقع" data-en="Site">الموقع</h4>
+        <a href="../index.html#work" data-ar="أعمالي" data-en="Work">أعمالي</a>
+        <a href="../index.html#skills" data-ar="مهاراتي" data-en="Skills">مهاراتي</a>
+        <a href="../index.html#about" data-ar="نبذة" data-en="About">نبذة</a>
+      </div>
+      <div class="foot-col">
+        <h4 data-ar="تواصل" data-en="Contact">تواصل</h4>
+        <a href="mailto:Ghadah.alassmi@outlook.com"><span class="latin">Ghadah.alassmi@outlook.com</span></a>
+        <a href="tel:+966594625990"><span class="latin">+966 59 462 5990</span></a>
       </div>
     </div>
-  </section>
-
-  <section class="detail-footer-nav">
-    <div class="detail-footer-row">
-      <a href="../index.html#work" class="back-btn arh" data-ar="← رجوع" data-en="← Back">← رجوع</a>
-      <a href="guidor.html" class="btn btn-solid next-btn arh" data-ar="المشروع التالي →" data-en="Next project →">المشروع التالي →</a>
+    <div class="socials">
+      <a class="social sc-blue" href="https://www.linkedin.com/in/ghadah-alassmi-98817737a" target="_blank" rel="noopener"><i class="ph-fill ph-linkedin-logo" aria-hidden="true"></i>LinkedIn</a>
+      <a class="social sc-pink" href="mailto:Ghadah.alassmi@outlook.com"><i class="ph-fill ph-envelope-simple" aria-hidden="true"></i><span data-ar="البريد" data-en="Email">البريد</span></a>
+      <a class="social sc-yellow" href="tel:+966594625990"><i class="ph-fill ph-phone" aria-hidden="true"></i><span data-ar="الجوال" data-en="Phone">الجوال</span></a>
+      <a class="social sc-purple" href="../assets/Ghadah-Alassmi-CV.pdf" target="_blank" rel="noopener"><i class="ph-fill ph-file-text" aria-hidden="true"></i><span data-ar="السيرة الذاتية" data-en="CV">السيرة الذاتية</span></a>
     </div>
-  </section>
-
-  <section id="contact" class="section-contact">
-    <div class="mono contact-label">Get in touch</div>
-    <h2 class="contact-title" data-ar="خلونا نشتغل مع بعض." data-en="Let's build something.">خلونا نشتغل مع بعض.</h2>
-    <p class="contact-body ar" data-ar="أبحث عن فرصة بدوام كامل في تطوير تطبيقات الموبايل أو الواجهات." data-en="I'm looking for a full-time role in mobile or front-end development.">أبحث عن فرصة بدوام كامل في تطوير تطبيقات الموبايل أو الواجهات.</p>
-    <div class="contact-actions">
-      <a class="btn btn-solid en" href="mailto:Ghadah.alassmi@outlook.com">Ghadah.alassmi@outlook.com</a>
-      <a class="btn btn-outline en" href="tel:+966594625990" style="direction:ltr;">+966 59 462 5990</a>
-      <a class="btn btn-outline en" href="https://www.linkedin.com/in/ghadah-alassmi-98817737a" target="_blank" rel="noreferrer">LinkedIn</a>
-      <a class="btn btn-outline arh" href="../assets/Ghadah-Alassmi-CV.pdf" target="_blank" data-ar="تحميل السيرة الذاتية" data-en="Download CV">تحميل السيرة الذاتية</a>
+    <div class="foot-bottom">
+      <span class="latin">© 2026 Ghadah Alassmi</span>
+      <span data-ar="صُمّم وبُني بعناية." data-en="Designed and built with care.">صُمّم وبُني بعناية.</span>
     </div>
-  </section>
+  </div>
+  <div class="stripes" aria-hidden="true"></div>
+</footer>
 
-  <footer class="site-footer">
-    <span class="footer-copy en">© 2026 GHADAH ALASSMI</span>
-    <span class="footer-note ar" data-ar="صُمّم وبُني بعناية" data-en="Designed and built with care">صُمّم وبُني بعناية</span>
-  </footer>
-
-  <script src="../js/main.js"></script>
+<script src="../js/main.js"></script>
 </body>
 </html>

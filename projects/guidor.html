@@ -3,153 +3,144 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Guidor — Ghadah Alassmi</title>
+<title>Guidor | Ghadah Alassmi</title>
+<meta name="theme-color" content="#f8f6f3">
+<link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Inter:wght@400;500;600;700;800&family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../css/styles.css">
+<link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@400;500;600;700;800&family=IBM+Plex+Sans+Arabic:wght@400;500;600&family=Aref+Ruqaa:wght@700&family=Playfair+Display:ital,wght@1,700&display=swap" rel="stylesheet">
+<script src="https://unpkg.com/@phosphor-icons/web@2.1.1"></script>
+<link rel="stylesheet" href="../css/site.css">
 </head>
-<body class="ar">
+<body>
+<a class="skip" href="#main" data-ar="تخطَّ إلى المحتوى" data-en="Skip to content">تخطَّ إلى المحتوى</a>
 
-  <div class="nav-wrap">
-    <nav class="nav-bar">
-      <a href="../index.html#top" class="nav-brand">Ghadah Alassmi</a>
-      <div class="nav-links">
-        <a class="nav-link arh" href="../index.html#work" data-ar="المشاريع" data-en="Work"><span class="dot"></span>المشاريع</a>
-        <a class="nav-link arh" href="../index.html#about" data-ar="نبذة" data-en="About"><span class="dot"></span>نبذة</a>
-        <a class="nav-link arh" href="../index.html#path" data-ar="الخبرات" data-en="Experience"><span class="dot"></span>الخبرات</a>
-        <a class="nav-link arh" href="#contact" data-ar="تواصل" data-en="Contact"><span class="dot"></span>تواصل</a>
-      </div>
-      <div class="nav-actions">
-        <button type="button" class="lang-btn en" data-lang-toggle>EN</button>
-        <a class="btn btn-pill-dark nav-contact arh" href="../assets/Ghadah-Alassmi-CV.pdf" target="_blank" data-ar="السيرة الذاتية" data-en="CV">السيرة الذاتية</a>
-      </div>
+<header class="nav">
+  <div class="wrap nav-in">
+    <a href="../index.html" class="brand" aria-label="Ghadah Alassmi">GHADAH<b>.</b></a>
+    <nav class="nav-pill" aria-label="Primary">
+      <a href="../index.html" data-ar="الرئيسية" data-en="Home">الرئيسية</a>
+      <a href="../index.html#work" class="is-active" data-ar="أعمالي" data-en="Work">أعمالي</a>
+      <a href="../index.html#skills" data-ar="مهاراتي" data-en="Skills">مهاراتي</a>
+      <a href="../index.html#about" data-ar="نبذة" data-en="About">نبذة</a>
     </nav>
-  </div>
-
-  <section class="detail-hero">
-    <a href="../index.html#work" class="back-btn arh" data-ar="← رجوع" data-en="← Back">← رجوع</a>
-
-    <div class="detail-title-row">
-      <div>
-        <div class="mono">GUIDOR — TRIP PLANNER</div>
-        <h1 class="detail-title arh en">Guidor</h1>
-        <p class="detail-tagline ar" data-ar="تطبيق تخطيط رحلات: تختار الوجهة، يقترح لك الإقامة والأنشطة، ويبني لك جدولاً يومياً قابلاً للتعديل." data-en="A trip planner: pick a destination, get stays and activities suggested, and build an editable day-by-day itinerary.">تطبيق تخطيط رحلات: تختار الوجهة، يقترح لك الإقامة والأنشطة، ويبني لك جدولاً يومياً قابلاً للتعديل.</p>
-      </div>
-      <div class="tag tag-olive ar" style="justify-self:start;" data-ar="تصميم" data-en="Design">تصميم</div>
-    </div>
-
-    <div class="fact-grid">
-      <div class="fact-item">
-        <div class="mono fact-k">Role</div>
-        <div class="fact-v arh" data-ar="تصميم المنتج" data-en="Product design">تصميم المنتج</div>
-      </div>
-      <div class="fact-item">
-        <div class="mono fact-k">Year</div>
-        <div class="fact-v en">2024</div>
-      </div>
-      <div class="fact-item">
-        <div class="mono fact-k">Tool</div>
-        <div class="fact-v en">Figma</div>
-      </div>
-      <div class="fact-item">
-        <div class="mono fact-k">Type</div>
-        <div class="fact-v arh" data-ar="مفهوم" data-en="Concept">مفهوم</div>
-      </div>
-    </div>
-  </section>
-
-  <div class="gallery-wrap">
-    <div class="gallery">
-      <div class="gallery-frame"><img src="../assets/guidor/1.png" alt="Guidor screen 1"></div>
+    <div class="nav-end">
+      <button type="button" class="lang" data-lang-toggle aria-label="Switch language">EN</button>
+      <a class="btn btn-dark" href="#contact"><span data-ar="تواصل معي" data-en="Contact">تواصل معي</span><span class="ic"><i class="ph-bold ph-arrow-up-right flip" aria-hidden="true"></i></span></a>
+      <button type="button" class="menu-btn" aria-label="Menu" aria-expanded="false" aria-controls="menu"><i class="ph-bold ph-list" aria-hidden="true"></i></button>
     </div>
   </div>
+  <div class="menu" id="menu">
+    <a href="../index.html" data-ar="الرئيسية" data-en="Home">الرئيسية</a>
+    <a href="../index.html#work" data-ar="أعمالي" data-en="Work">أعمالي</a>
+    <a href="../index.html#skills" data-ar="مهاراتي" data-en="Skills">مهاراتي</a>
+    <a href="../index.html#about" data-ar="نبذة" data-en="About">نبذة</a>
+    <a href="#contact" data-ar="تواصل معي" data-en="Contact">تواصل معي</a>
+    <button type="button" class="lang" data-lang-toggle aria-label="Switch language">EN</button>
+  </div>
+</header>
 
-  <section class="detail-body">
-    <div class="detail-grid">
+<main id="main">
+  <section class="d-hero">
+    <div class="wrap">
+      <a href="../index.html#work" class="back"><i class="ph-bold ph-arrow-right flip-back" aria-hidden="true"></i><span data-ar="كل المشاريع" data-en="All projects">كل المشاريع</span></a>
+      <div class="d-head">
+        <h1 data-ar="Guidor، رحلتك &lt;span class=&quot;em&quot;&gt;بدون لخبطة.&lt;/span&gt;" data-en="Guidor, trips &lt;span class=&quot;em&quot;&gt;without the chaos.&lt;/span&gt;">Guidor، رحلتك <span class="em">بدون لخبطة.</span></h1>
+        <p data-ar="تطبيق تخطيط رحلات: تختار الوجهة، يقترح لك الإقامة والأنشطة، ويبني لك جدولاً يومياً قابلاً للتعديل." data-en="A trip planner: pick a destination, get stays and activities suggested, and build an editable day-by-day itinerary.">تطبيق تخطيط رحلات: تختار الوجهة، يقترح لك الإقامة والأنشطة، ويبني لك جدولاً يومياً قابلاً للتعديل.</p>
+      </div>
+      <div class="facts">
+        <div class="fact f-pink"><span data-ar="الدور" data-en="Role">الدور</span><strong data-ar="تصميم المنتج" data-en="Product design">تصميم المنتج</strong></div>
+        <div class="fact f-yellow"><span data-ar="السنة" data-en="Year">السنة</span><strong class="latin" style="text-align:start">2024</strong></div>
+        <div class="fact f-purple"><span data-ar="الأداة" data-en="Tool">الأداة</span><strong class="latin" style="text-align:start">Figma</strong></div>
+        <div class="fact f-teal"><span data-ar="النوع" data-en="Type">النوع</span><strong data-ar="مفهوم تصميمي" data-en="Design concept">مفهوم تصميمي</strong></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="on-plum gallery-band">
+    <div class="gallery single" dir="ltr">
+      <button type="button" aria-label="Open screen 1"><img src="../assets/guidor/1.png" alt="Guidor screen" width="533" height="971"></button>
+    </div>
+  </div>
+  <div class="stripes" aria-hidden="true"></div>
+
+  <section class="sec">
+    <div class="wrap d-body">
       <div>
-        <h2 class="detail-h2 arh" data-ar="نظرة عامة" data-en="Overview">نظرة عامة</h2>
-        <p class="detail-overview ar" data-ar="مشروع تصميمي ركزت فيه على أصعب جزء في تطبيقات السفر: بناء الجدول اليومي دون إرهاق المستخدم. صممت رحلة onboarding قصيرة، واختيار وجهة بصري، وجدولاً يومياً بالسحب والإفلات." data-en="A design project focused on the hardest part of travel apps: building the itinerary without overwhelming the user. I designed a short onboarding, a visual destination picker and a drag-and-drop daily plan.">مشروع تصميمي ركزت فيه على أصعب جزء في تطبيقات السفر: بناء الجدول اليومي دون إرهاق المستخدم. صممت رحلة onboarding قصيرة، واختيار وجهة بصري، وجدولاً يومياً بالسحب والإفلات.</p>
+        <h2 data-ar="نظرة عامة" data-en="Overview">نظرة عامة</h2>
+        <p class="overview" data-ar="مشروع تصميمي ركزت فيه على أصعب جزء في تطبيقات السفر: بناء الجدول اليومي بدون ما يتعب المستخدم. صممت تجربة تعريف قصيرة، واختيار وجهة بصري، وجدولاً يومياً بالسحب والإفلات." data-en="A design project focused on the hardest part of travel apps: building the itinerary without overwhelming the user. I designed a short onboarding, a visual destination picker and a drag-and-drop daily plan.">مشروع تصميمي ركزت فيه على أصعب جزء في تطبيقات السفر: بناء الجدول اليومي بدون ما يتعب المستخدم. صممت تجربة تعريف قصيرة، واختيار وجهة بصري، وجدولاً يومياً بالسحب والإفلات.</p>
 
-        <h2 class="detail-h2 arh" data-ar="ما بنيته" data-en="What I built">ما بنيته</h2>
-        <div class="built-list">
-          <div class="built-item">
-            <span class="built-n en">01</span>
-            <span class="built-txt ar" data-ar="خريطة رحلة المستخدم وهيكل المعلومات" data-en="User journey map and information architecture">خريطة رحلة المستخدم وهيكل المعلومات</span>
-          </div>
-          <div class="built-item">
-            <span class="built-n en">02</span>
-            <span class="built-txt ar" data-ar="تصميم عالي الدقة لـ 18 شاشة" data-en="High-fidelity design across 18 screens">تصميم عالي الدقة لـ 18 شاشة</span>
-          </div>
-          <div class="built-item">
-            <span class="built-n en">03</span>
-            <span class="built-txt ar" data-ar="نموذج تفاعلي كامل قابل للاختبار" data-en="A complete, testable interactive prototype">نموذج تفاعلي كامل قابل للاختبار</span>
-          </div>
-          <div class="built-item">
-            <span class="built-n en">04</span>
-            <span class="built-txt ar" data-ar="مكتبة مكونات ونظام ألوان وخطوط" data-en="Component library, colour and type system">مكتبة مكونات ونظام ألوان وخطوط</span>
-          </div>
+        <h2 data-ar="وش بنيت" data-en="What I built">وش بنيت</h2>
+        <div class="built">
+          <div><b>01</b><span data-ar="خريطة رحلة المستخدم وهيكل المعلومات." data-en="User journey map and information architecture.">خريطة رحلة المستخدم وهيكل المعلومات.</span></div>
+          <div><b>02</b><span data-ar="تصميم عالي الدقة لـ 18 شاشة." data-en="High-fidelity design across 18 screens.">تصميم عالي الدقة لـ 18 شاشة.</span></div>
+          <div><b>03</b><span data-ar="نموذج تفاعلي كامل قابل للاختبار." data-en="A complete, testable interactive prototype.">نموذج تفاعلي كامل قابل للاختبار.</span></div>
+          <div><b>04</b><span data-ar="مكتبة مكونات ونظام ألوان وخطوط." data-en="Component library, colour and type system.">مكتبة مكونات ونظام ألوان وخطوط.</span></div>
         </div>
 
-        <h2 class="detail-h2 arh" data-ar="النتائج" data-en="Outcomes">النتائج</h2>
-        <div class="outcomes-grid">
-          <div class="outcome-card">
-            <div class="outcome-v en">18</div>
-            <div class="outcome-k ar" data-ar="شاشة مصممة" data-en="Screens designed">شاشة مصممة</div>
-          </div>
-          <div class="outcome-card">
-            <div class="outcome-v en">1</div>
-            <div class="outcome-k ar" data-ar="نموذج تفاعلي كامل" data-en="Full prototype">نموذج تفاعلي كامل</div>
-          </div>
-          <div class="outcome-card">
-            <div class="outcome-v en">UI</div>
-            <div class="outcome-k ar" data-ar="نظام مكونات" data-en="Component system">نظام مكونات</div>
-          </div>
+        <h2 data-ar="النتيجة" data-en="Outcome">النتيجة</h2>
+        <div class="outcomes">
+          <div class="outcome s-pink"><strong>18</strong><span data-ar="شاشة مصممة" data-en="Screens designed">شاشة مصممة</span></div>
+          <div class="outcome s-purple"><strong>1</strong><span data-ar="نموذج تفاعلي كامل" data-en="Full prototype">نموذج تفاعلي كامل</span></div>
+          <div class="outcome s-teal"><strong>UI</strong><span data-ar="نظام مكونات" data-en="Component system">نظام مكونات</span></div>
         </div>
       </div>
 
-      <div class="detail-side">
-        <div class="detail-side-card">
-          <div class="mono detail-stack-label" data-ar="التقنيات" data-en="Stack">التقنيات</div>
-          <div style="display:flex; flex-wrap:wrap; gap:8px;">
-            <span class="stack-chip en">Figma</span>
-            <span class="stack-chip en">Prototyping</span>
-            <span class="stack-chip en">UI Design</span>
+      <aside class="side">
+        <div class="side-card">
+          <h3 data-ar="التقنيات" data-en="Stack">التقنيات</h3>
+          <div class="tags"><span class="tag">Figma</span><span class="tag">Prototyping</span><span class="tag">UI Design</span></div>
+        </div>
+        <div class="side-card">
+          <h3 data-ar="روابط المشروع" data-en="Links">روابط المشروع</h3>
+          <div class="link-row">
+            <a class="btn btn-dark" href="https://share.google/DoMy3J2iQ2rk10uNG" target="_blank" rel="noopener"><span data-ar="شاهد التصميم" data-en="View the design">شاهد التصميم</span><span class="ic"><i class="ph-bold ph-figma-logo" aria-hidden="true"></i></span></a>
           </div>
         </div>
-        <div class="detail-side-card">
-          <div class="mono detail-stack-label" data-ar="روابط المشروع" data-en="Links">روابط المشروع</div>
-          <div style="display:flex; flex-wrap:wrap; gap:8px;">
-            <a class="btn btn-outline btn-sm en" href="https://share.google/DoMy3J2iQ2rk10uNG" target="_blank" rel="noreferrer">Figma</a>
-          </div>
-        </div>
+      </aside>
+    </div>
+  </section>
+
+  <section class="sec" style="padding-top:0">
+    <div class="wrap next">
+      <a href="../index.html#work" class="back"><i class="ph-bold ph-arrow-right flip-back" aria-hidden="true"></i><span data-ar="كل المشاريع" data-en="All projects">كل المشاريع</span></a>
+      <a href="sunshine.html" class="btn btn-dark"><span data-ar="المشروع التالي: Sunshine" data-en="Next: Sunshine">المشروع التالي: Sunshine</span><span class="ic"><i class="ph-bold ph-arrow-left flip-next" aria-hidden="true"></i></span></a>
+    </div>
+  </section>
+</main>
+
+<footer class="footer" id="contact">
+  <div class="wrap">
+    <div class="foot-top">
+      <div class="foot-brand">
+        <a href="../index.html" class="brand">GHADAH<b>.</b></a>
+        <p data-ar="مهندسة برمجيات ومطوّرة تطبيقات Flutter." data-en="Software engineer and Flutter developer.">مهندسة برمجيات ومطوّرة تطبيقات Flutter.</p>
+      </div>
+      <div class="foot-col">
+        <h4 data-ar="الموقع" data-en="Site">الموقع</h4>
+        <a href="../index.html#work" data-ar="أعمالي" data-en="Work">أعمالي</a>
+        <a href="../index.html#skills" data-ar="مهاراتي" data-en="Skills">مهاراتي</a>
+        <a href="../index.html#about" data-ar="نبذة" data-en="About">نبذة</a>
+      </div>
+      <div class="foot-col">
+        <h4 data-ar="تواصل" data-en="Contact">تواصل</h4>
+        <a href="mailto:Ghadah.alassmi@outlook.com"><span class="latin">Ghadah.alassmi@outlook.com</span></a>
+        <a href="tel:+966594625990"><span class="latin">+966 59 462 5990</span></a>
       </div>
     </div>
-  </section>
-
-  <section class="detail-footer-nav">
-    <div class="detail-footer-row">
-      <a href="../index.html#work" class="back-btn arh" data-ar="← رجوع" data-en="← Back">← رجوع</a>
-      <a href="twaqq.html" class="btn btn-solid next-btn arh" data-ar="المشروع التالي →" data-en="Next project →">المشروع التالي →</a>
+    <div class="socials">
+      <a class="social sc-blue" href="https://www.linkedin.com/in/ghadah-alassmi-98817737a" target="_blank" rel="noopener"><i class="ph-fill ph-linkedin-logo" aria-hidden="true"></i>LinkedIn</a>
+      <a class="social sc-pink" href="mailto:Ghadah.alassmi@outlook.com"><i class="ph-fill ph-envelope-simple" aria-hidden="true"></i><span data-ar="البريد" data-en="Email">البريد</span></a>
+      <a class="social sc-yellow" href="tel:+966594625990"><i class="ph-fill ph-phone" aria-hidden="true"></i><span data-ar="الجوال" data-en="Phone">الجوال</span></a>
+      <a class="social sc-purple" href="../assets/Ghadah-Alassmi-CV.pdf" target="_blank" rel="noopener"><i class="ph-fill ph-file-text" aria-hidden="true"></i><span data-ar="السيرة الذاتية" data-en="CV">السيرة الذاتية</span></a>
     </div>
-  </section>
-
-  <section id="contact" class="section-contact">
-    <div class="mono contact-label">Get in touch</div>
-    <h2 class="contact-title" data-ar="خلونا نشتغل مع بعض." data-en="Let's build something.">خلونا نشتغل مع بعض.</h2>
-    <p class="contact-body ar" data-ar="أبحث عن فرصة بدوام كامل في تطوير تطبيقات الموبايل أو الواجهات." data-en="I'm looking for a full-time role in mobile or front-end development.">أبحث عن فرصة بدوام كامل في تطوير تطبيقات الموبايل أو الواجهات.</p>
-    <div class="contact-actions">
-      <a class="btn btn-solid en" href="mailto:Ghadah.alassmi@outlook.com">Ghadah.alassmi@outlook.com</a>
-      <a class="btn btn-outline en" href="tel:+966594625990" style="direction:ltr;">+966 59 462 5990</a>
-      <a class="btn btn-outline en" href="https://www.linkedin.com/in/ghadah-alassmi-98817737a" target="_blank" rel="noreferrer">LinkedIn</a>
-      <a class="btn btn-outline arh" href="../assets/Ghadah-Alassmi-CV.pdf" target="_blank" data-ar="تحميل السيرة الذاتية" data-en="Download CV">تحميل السيرة الذاتية</a>
+    <div class="foot-bottom">
+      <span class="latin">© 2026 Ghadah Alassmi</span>
+      <span data-ar="صُمّم وبُني بعناية." data-en="Designed and built with care.">صُمّم وبُني بعناية.</span>
     </div>
-  </section>
+  </div>
+  <div class="stripes" aria-hidden="true"></div>
+</footer>
 
-  <footer class="site-footer">
-    <span class="footer-copy en">© 2026 GHADAH ALASSMI</span>
-    <span class="footer-note ar" data-ar="صُمّم وبُني بعناية" data-en="Designed and built with care">صُمّم وبُني بعناية</span>
-  </footer>
-
-  <script src="../js/main.js"></script>
+<script src="../js/main.js"></script>
 </body>
 </html>
