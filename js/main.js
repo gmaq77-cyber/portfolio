@@ -61,12 +61,14 @@
     { src: 'assets/sunshine/1.jpg', name: 'Sunshine', sub: 'Training studio', tech: 'Next.js', chip: 'Live', c: 'c-pink' },
     { src: 'assets/twaqq/2.png', name: 'Twaqq', sub: 'Flutter · Firebase', tech: 'Flutter', chip: 'Live', c: 'c-pink' },
     { src: 'assets/sunshine/2.jpg', name: 'Sunshine', sub: 'Packages', tech: 'Next.js', chip: 'Live', c: 'c-teal' },
-    { src: 'assets/risha/1.png', name: 'Risha', sub: 'Graduation project', tech: 'Flutter', chip: 'Team lead', c: 'c-yellow' },
+    { src: 'assets/risha/3.jpg', name: 'Risha', sub: 'Graduation project', tech: 'Flutter', chip: 'Team lead', c: 'c-yellow' },
     { src: 'assets/twaqq/4.jpg', name: 'Twaqq', sub: 'Leaderboard', tech: 'Flutter', chip: 'Live', c: 'c-pink' },
     { src: 'assets/sunshine/5.jpg', name: 'Sunshine', sub: 'Private studio', tech: 'Next.js', chip: 'Live', c: 'c-teal' },
-    { src: 'assets/guidor/1.png', name: 'Guidor', sub: 'Trip planner', tech: 'Figma', chip: 'Design', c: 'c-purple' },
+    { src: 'assets/guidor/2.jpg', name: 'Guidor', sub: 'Trip planner', tech: 'Figma', chip: 'Design', c: 'c-purple' },
     { src: 'assets/twaqq/3.png', name: 'Twaqq', sub: 'Predictions', tech: 'Flutter', chip: 'Live', c: 'c-pink' },
-    { src: 'assets/sunshine/4.jpg', name: 'Sunshine', sub: 'Coach profile', tech: 'Next.js', chip: 'Live', c: 'c-teal' }
+    { src: 'assets/sunshine/4.jpg', name: 'Sunshine', sub: 'Coach profile', tech: 'Next.js', chip: 'Live', c: 'c-teal' },
+    { src: 'assets/risha/5.jpg', name: 'Risha', sub: 'Rewards', tech: 'Flutter', chip: 'Team lead', c: 'c-yellow' },
+    { src: 'assets/guidor/3.jpg', name: 'Guidor', sub: 'Place details', tech: 'Figma', chip: 'Design', c: 'c-purple' }
   ];
   function initStrip() {
     var track = document.getElementById('strip');
