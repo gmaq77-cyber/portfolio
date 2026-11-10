@@ -528,3 +528,8 @@ html[lang="en"] .d-head h1 { letter-spacing: -0.035em; line-height: 1.05; }
   .work-card.wide .work-media { padding-top: 56px; }
   .work-card.wide .work-body { padding: 22px 24px 24px; }
 }
+
+/* iPad-shaped screens (Risha) */
+.gallery.tablet button { width: 330px; border-radius: 20px; }
+.gallery.tablet img { height: auto; aspect-ratio: 1000 / 1415; object-fit: cover; }
+@media (max-width: 560px) { .gallery.tablet button { width: 270px; } }
